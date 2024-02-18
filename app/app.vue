@@ -22,5 +22,5 @@ useHead({
 @import url('~/assets/css/plugins.css');
 
 /* Core Style Css */
-@import url('~/assets/css/style.css');
+@import url('~/assets/scss/style.scss');
 </style>

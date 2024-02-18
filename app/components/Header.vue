@@ -6,7 +6,7 @@
           <div class="bord">
             <!-- Logo -->
             <a class="logo icon-img-70" href="#">
-              <img src="assets/imgs/logo-light.png" alt="logo">
+              Denisoed
             </a>
           </div>
         </div>
@@ -59,3 +59,15 @@
     </div>
   </nav>
 </template>
+
+<style lang="scss" scoped>
+.navbar {
+  .logo {
+    color: #fff;
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+}
+</style>

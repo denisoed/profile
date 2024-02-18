@@ -11,10 +11,7 @@
             </div>
             <div class="mt-50">
               <a href="#0" class="butn butn-md butn-bg bg-white text-dark radius-5">
-                <span>Download CV</span>
-              </a>
-              <a href="#0" class="butn butn-md butn-bord radius-5 ml-15" data-scroll-nav="5">
-                <span>Hire Me !</span>
+                <span>Contact Me</span>
               </a>
             </div>
           </div>
