@@ -1,9 +1,17 @@
 <template>
-  <h1>Home</h1>
+  <main>
+    <!-- ==================== Start Navbar ==================== -->
+    <Header />
+    <!-- ==================== End Navbar ==================== -->
+  
+    <!-- ==================== Start Header ==================== -->
+    <Banner />
+    <!-- ==================== End Header ==================== -->
+  </main>
 </template>
 
 <script setup lang="ts">
 useHead({
-  title: "Home page",
+  title: "Denis Grushkin - Web Enginer",
 });
 </script>
