@@ -60,6 +60,19 @@
   </nav>
 </template>
 
+<script setup lang="ts">
+const LINKS = [
+  {
+    name: 'Home',
+    link: '#banner',
+  },
+  {
+    name: 'About',
+    link: '#about',
+  },
+]
+</script>
+
 <style lang="scss" scoped>
 .navbar {
   .logo {
