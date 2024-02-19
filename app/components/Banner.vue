@@ -21,7 +21,7 @@
             <img src="assets/imgs/header/b1.png" alt="">
             <div class="box-shadwo">
               <div class="d-flex align-items-center">
-                <h2>8</h2>
+                <h2>{{ expirience }}</h2>
                 <h6>Years of <br> Experiences</h6>
               </div>
             </div>
@@ -31,3 +31,9 @@
     </div>
   </section>
 </template>
+
+<script setup lang="ts">
+const start = 2016;
+const end = new Date().getFullYear();
+const expirience = end - start;
+</script>
