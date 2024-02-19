@@ -16,22 +16,13 @@
             <div class="full-width">
               <ul class="navbar-nav">
                 <li class="nav-item">
-                  <a class="nav-link" href="#0" data-scroll-nav="0"><span class="rolling-text">Home</span></a>
+                  <a class="nav-link" href="#home" data-scroll-nav="0"><span class="rolling-text">Home</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#0" data-scroll-nav="1"><span class="rolling-text">About</span></a>
+                  <a class="nav-link" href="#services" data-scroll-nav="1"><span class="rolling-text">Services</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#0" data-scroll-nav="2"><span class="rolling-text">Services</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#0" data-scroll-nav="3"><span class="rolling-text">Portfolio</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#0" data-scroll-nav="4"><span class="rolling-text">Blog</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#0" data-scroll-nav="5"><span class="rolling-text">Contact</span></a>
+                  <a class="nav-link" href="#experience" data-scroll-nav="2"><span class="rolling-text">Experiences</span></a>
                 </li>
               </ul>
             </div>
@@ -41,13 +32,19 @@
           <div class="bord d-flex justify-content-end">
             <ul class="social d-flex rest">
               <li>
-                <a href="#0"><i class="fab fa-linkedin-in"></i></a>
+                <a href="http://linkedin.com/in/denis-grushkin-161b31166" target="_blank">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
               </li>
               <li>
-                <a href="#0"><i class="fab fa-behance"></i></a>
+                <a href="https://github.com/denisoed" target="_blank">
+                  <i class="fab fa-github"></i>
+                </a>
               </li>
               <li>
-                <a href="#0"><i class="fab fa-dribbble"></i></a>
+                <a href="https://medium.com/@denisoed" target="_blank">
+                  <i class="fab fa-medium"></i>
+                </a>
               </li>
             </ul>
             <button class="navbar-toggler" type="button">

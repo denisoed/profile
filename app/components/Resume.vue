@@ -1,5 +1,5 @@
 <template>
-  <section class="resume2 section-padding wow fadeIn">
+  <section class="resume2 section-padding wow fadeIn" data-scroll-index="2">
     <div class="container">
       <div class="sec-head mb-80 wow fadeIn">
         <div class="row justify-content-center">

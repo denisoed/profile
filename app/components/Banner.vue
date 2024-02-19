@@ -10,7 +10,7 @@
               <p>My objective is to foster business growth through the adoption of cutting-edge technologies.</p>
             </div>
             <div class="mt-50">
-              <a href="#0" class="butn butn-md butn-bg bg-white text-dark radius-5">
+              <a href="https://telegram.me/denisoed" target="_blank" class="butn butn-md butn-bord radius-5">
                 <span>Contact Me</span>
               </a>
             </div>
@@ -19,7 +19,6 @@
         <div class="col-lg-6">
           <div class="img-author">
             <img src="assets/imgs/header/b1.png" alt="">
-
             <div class="box-shadwo">
               <div class="d-flex align-items-center">
                 <h2>8</h2>
