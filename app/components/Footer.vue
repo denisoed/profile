@@ -5,7 +5,7 @@
         <div class="col-12">
           <div class="text-center">
             <p class="fz-13">© {{ YEAR }} <span class="underline main-color"><a
-                  href="https://github.com/denisoed" target="_blank">Denisoed</a></span>
+                href="#home" data-scroll-nav="0">Denisoed</a></span>
             </p>
           </div>
         </div>

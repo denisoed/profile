@@ -17,7 +17,7 @@
     </div>
     <div class="container">
       <div class="row">
-        <div class="col-lg-6 valign">
+        <div class="col-lg-6">
           <div class="resume-clumn">
             <div v-for="(item, i) in LIST1" :key="`list-1-item-${i}`" class="items mb-40">
               <h6 class="date fz-14">{{ item.date }}</h6>
@@ -32,7 +32,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-6 valign">
+        <div class="col-lg-6">
           <div class="resume-clumn">
             <div v-for="(item, i) in LIST2" :key="`list-2-item-${i}`" class="items mb-40">
               <h6 class="date fz-14">{{ item.date }}</h6>

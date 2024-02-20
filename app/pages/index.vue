@@ -23,17 +23,15 @@
     <!-- ==================== End Services ==================== -->
 
     <!-- ==================== Start My Resume ==================== -->
-    <Resume />
+    <Resume class="pb-0" />
     <!-- ==================== End My Resume ==================== -->
+
+    <!-- ==================== Start Skills ==================== -->
+    <Skills />
+    <!-- ==================== End Skills ==================== -->
 
     <!-- ==================== Start Footer ==================== -->
     <Footer />
     <!-- ==================== End Footer ==================== -->
   </main>
 </template>
-
-<script setup lang="ts">
-useHead({
-  title: "Denis Grushkin - Web Enginer",
-});
-</script>
