@@ -32,6 +32,11 @@
           <div class="bord d-flex justify-content-end">
             <ul class="social d-flex rest">
               <li>
+                <a href="https://telegram.me/denisoed" target="_blank">
+                  <i class="fab fa-telegram"></i>
+                </a>
+              </li>
+              <li>
                 <a href="http://linkedin.com/in/denis-grushkin-161b31166" target="_blank">
                   <i class="fab fa-linkedin-in"></i>
                 </a>

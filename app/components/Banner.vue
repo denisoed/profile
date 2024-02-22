@@ -9,22 +9,19 @@
             <div class="text mt-30">
               <p>My objective is to foster business growth through the adoption of cutting-edge technologies.</p>
             </div>
-            <div class="mt-50">
-              <a href="https://telegram.me/denisoed" target="_blank" class="butn butn-md butn-bord radius-5">
-                <span>Contact Me</span>
-              </a>
+            <div class="mt-50 d-flex align-items-center">
+              <div class="box-shadwo mr-30">
+                <div class="d-flex align-items-center">
+                  <h2>{{ expirience }}</h2>
+                  <h6>Years of <br> Experiences</h6>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-6 d-flex align-items-end">
           <div class="img-author">
-            <img src="assets/imgs/header/b1.png" alt="">
-            <div class="box-shadwo">
-              <div class="d-flex align-items-center">
-                <h2>{{ expirience }}</h2>
-                <h6>Years of <br> Experiences</h6>
-              </div>
-            </div>
+            <img src="assets/imgs/header/me.png" alt="Denis Grushkin">
           </div>
         </div>
       </div>
