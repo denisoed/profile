@@ -6,8 +6,8 @@
           <div class="col-lg-8 text-center">
             <div class="d-inline-block">
               <div class="sub-title-icon d-flex align-items-center">
-                <span class="icon pe-7s-chat"></span>
-                <h6>My Skills</h6>
+                <span class="icon pe-7s-tools"></span>
+                <h2 class="fz-16">My Skills</h2>
               </div>
             </div>
             <h3>A list of technologies I know and use</h3>
@@ -19,18 +19,18 @@
       <div class="row">
         <div class="col-lg-6">
           <div v-for="(arr, i) in LIST1" :key="`list-1-item-${i}`" class="items d-flex gap-2">
-            <h6 class="date fz-14 bg-white text-black" v-for="(item, j) in arr" :key="`list-1-item-${i}-item-${j}`">
+            <div class="date fz-14 bg-white text-black" v-for="(item, j) in arr" :key="`list-1-item-${i}-item-${j}`">
               {{ item }}
-            </h6>
+            </div>
           </div>
           <div class="resume-clumn">
           </div>
         </div>
         <div class="col-lg-6">
           <div v-for="(arr, i) in LIST2" :key="`list-1-item-${i}`" class="items d-flex gap-2">
-            <h6 class="date fz-14 bg-white text-black" v-for="(item, j) in arr" :key="`list-1-item-${i}-item-${j}`">
+            <div class="date fz-14 bg-white text-black" v-for="(item, j) in arr" :key="`list-1-item-${i}-item-${j}`">
               {{ item }}
-            </h6>
+            </div>
           </div>
         </div>
       </div>

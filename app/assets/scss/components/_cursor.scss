@@ -21,6 +21,10 @@
     mix-blend-mode: difference;
     transition: transform 0.3s ease, opacity 0.4s ease;
     z-index: 99999;
+
+    @media screen and (max-width: 992px) {
+        display: none;
+    }
 }
 
 .cursor-active {

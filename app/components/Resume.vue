@@ -6,8 +6,8 @@
           <div class="col-lg-8 text-center">
             <div class="d-inline-block">
               <div class="sub-title-icon d-flex align-items-center">
-                <span class="icon pe-7s-chat"></span>
-                <h6>My Resume</h6>
+                <span class="icon pe-7s-portfolio"></span>
+                <h2 class="fz-16">My Resume</h2>
               </div>
             </div>
             <h3>Education & Experience</h3>
@@ -20,9 +20,9 @@
         <div class="col-lg-6">
           <div class="resume-clumn">
             <div v-for="(item, i) in LIST1" :key="`list-1-item-${i}`" class="items mb-40">
-              <h6 class="date fz-14">{{ item.date }}</h6>
-              <h5>{{ item.projectName }}</h5>
-              <span class="opacity-8 fw-500 mt-10">[ {{ item.technology }} ]</span>
+              <div class="date fz-14">{{ item.date }}</div>
+              <div class="fz-18 fw-bold">{{ item.projectName }}</div>
+              <span class="opacity-8 fw-bold mt-10">[ {{ item.technology }} ]</span>
               <p class="fz-14 mt-10">{{ item.description }}</p>
               <ul class="list-responsibility mt-10 mb-0">
                 <li v-for="(resp, j) in item.responsibilities" :key="`list-1-item-${i}-resp-${j}`">
@@ -35,9 +35,9 @@
         <div class="col-lg-6">
           <div class="resume-clumn">
             <div v-for="(item, i) in LIST2" :key="`list-2-item-${i}`" class="items mb-40">
-              <h6 class="date fz-14">{{ item.date }}</h6>
-              <h5>{{ item.projectName }}</h5>
-              <span class="opacity-8 fw-500 mt-10">[ {{ item.technology }} ]</span>
+              <div class="date fz-14">{{ item.date }}</div>
+              <div class="fz-18 fw-bold">{{ item.projectName }}</div>
+              <span class="opacity-8 fw-bold mt-10">[ {{ item.technology }} ]</span>
               <p class="fz-14 mt-10">{{ item.description }}</p>
               <ul class="list-responsibility mt-10 mb-0">
                 <li v-for="(resp, j) in item.responsibilities" :key="`list-2-item-${i}-resp-${j}`">

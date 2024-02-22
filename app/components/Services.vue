@@ -6,8 +6,8 @@
           <div class="col-lg-8 text-center">
             <div class="d-inline-block">
               <div class="sub-title-icon d-flex align-items-center">
-                <span class="icon pe-7s-bell"></span>
-                <h6>My Services</h6>
+                <span class="icon pe-7s-box2"></span>
+                <h2 class="fz-16">My Services</h2>
               </div>
             </div>
             <h3>What Services I Provide ?</h3>
@@ -29,7 +29,7 @@
                 </div>
                 <div>
                   <span class="opacity-7 fz-13 mb-5">{{ service.step }}</span>
-                  <h5 class="fz-20">{{ service.title }}</h5>
+                  <div class="fz-20">{{ service.title }}</div>
                 </div>
               </div>
               <p>{{ service.desc }}</p>

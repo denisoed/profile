@@ -1,22 +1,22 @@
 <template>
   <ul class="social-links d-flex rest">
     <li>
-      <a href="https://telegram.me/denisoed" target="_blank">
+      <a href="https://telegram.me/denisoed" target="_blank" aria-label="Telegram link">
         <i class="fab fa-telegram"></i>
       </a>
     </li>
     <li>
-      <a href="http://linkedin.com/in/denis-grushkin-161b31166" target="_blank">
+      <a href="http://linkedin.com/in/denis-grushkin-161b31166" target="_blank" aria-label="Linkedin link">
         <i class="fab fa-linkedin-in"></i>
       </a>
     </li>
     <li>
-      <a href="https://github.com/denisoed" target="_blank">
+      <a href="https://github.com/denisoed" target="_blank" aria-label="Github link">
         <i class="fab fa-github"></i>
       </a>
     </li>
     <li>
-      <a href="https://medium.com/@denisoed" target="_blank">
+      <a href="https://medium.com/@denisoed" target="_blank" aria-label="Medium link">
         <i class="fab fa-medium"></i>
       </a>
     </li>
