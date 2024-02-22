@@ -25,33 +25,13 @@
                   <a class="nav-link" href="#experience" data-scroll-nav="2"><span class="rolling-text">Experiences</span></a>
                 </li>
               </ul>
+              <SocialLinks class="mobile-social-links ml-10 mt-10" />
             </div>
           </div>
         </div>
         <div class="col-lg-3 col-6 order2">
           <div class="bord d-flex justify-content-end">
-            <ul class="social d-flex rest">
-              <li>
-                <a href="https://telegram.me/denisoed" target="_blank">
-                  <i class="fab fa-telegram"></i>
-                </a>
-              </li>
-              <li>
-                <a href="http://linkedin.com/in/denis-grushkin-161b31166" target="_blank">
-                  <i class="fab fa-linkedin-in"></i>
-                </a>
-              </li>
-              <li>
-                <a href="https://github.com/denisoed" target="_blank">
-                  <i class="fab fa-github"></i>
-                </a>
-              </li>
-              <li>
-                <a href="https://medium.com/@denisoed" target="_blank">
-                  <i class="fab fa-medium"></i>
-                </a>
-              </li>
-            </ul>
+            <SocialLinks class="desktop-social-links" />
             <button class="navbar-toggler" type="button">
               <span class="icon-bar"><i class="fas fa-bars"></i></span>
             </button>
@@ -83,6 +63,20 @@ const LINKS = [
     font-size: 18px;
     text-transform: uppercase;
     font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+
+  .mobile-social-links {
+    display: none !important;
+
+    @media screen and (max-width: 992px) {
+      display: flex !important;
+    }
+  }
+
+  .desktop-social-links {
+    @media screen and (max-width: 992px) {
+      display: none !important;
+    }
   }
 }
 </style>
