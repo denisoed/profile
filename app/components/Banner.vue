@@ -1,5 +1,5 @@
 <template>
-  <section class="header-crev bord-thin-bottom" data-scroll-index="0">
+  <section class="banner header-crev bord-thin-bottom" data-scroll-index="0">
     <div class="container">
       <div class="row">
         <div class="col-lg-6 valign">
@@ -9,8 +9,8 @@
             <div class="text mt-30">
               <p>My objective is to foster business growth through the adoption of cutting-edge technologies.</p>
             </div>
-            <div class="mt-50 d-flex align-items-center">
-              <div class="box-shadwo mr-30">
+            <div class="mt-50 d-flex align-items-center justify-content-center justify-content-lg-start">
+              <div class="box-shadwo">
                 <div class="d-flex align-items-center">
                   <span class="fz-60 fw-bold mr-10">{{ expirience }}</span>
                   <span class="fz-16">Years of <br> Experiences</span>

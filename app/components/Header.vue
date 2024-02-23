@@ -30,7 +30,7 @@
           </div>
         </div>
         <div class="col-lg-3 col-6 order2">
-          <div class="bord d-flex justify-content-end">
+          <div class="bord d-flex justify-content-end align-items-center">
             <SocialLinks class="desktop-social-links" />
             <button class="navbar-toggler" type="button">
               <span class="icon-bar"><i class="fas fa-bars"></i></span>
@@ -74,6 +74,17 @@ const LINKS = [
   }
 
   .desktop-social-links {
+    @media screen and (max-width: 1200px) {
+      :deep(li) {
+        width: 25px;
+        height: 25px;
+
+        i {
+          font-size: 14px;
+        }
+      }
+    }
+
     @media screen and (max-width: 992px) {
       display: none !important;
     }

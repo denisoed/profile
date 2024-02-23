@@ -17,18 +17,18 @@
     </div>
     <div class="container">
       <div class="row">
-        <div class="col-lg-6">
-          <div v-for="(arr, i) in LIST1" :key="`list-1-item-${i}`" class="items d-flex gap-2">
-            <div class="date fz-14 bg-white text-black" v-for="(item, j) in arr" :key="`list-1-item-${i}-item-${j}`">
+        <div class="col-lg-6 d-flex flex-column gap-3">
+          <div v-for="(arr, i) in LIST1" :key="`list-1-item-${i}`" class="items d-flex align-items-center flex-wrap gap-3">
+            <div class="skill bg-white text-black" v-for="(item, j) in arr" :key="`list-1-item-${i}-item-${j}`">
               {{ item }}
             </div>
           </div>
           <div class="resume-clumn">
           </div>
         </div>
-        <div class="col-lg-6">
-          <div v-for="(arr, i) in LIST2" :key="`list-1-item-${i}`" class="items d-flex gap-2">
-            <div class="date fz-14 bg-white text-black" v-for="(item, j) in arr" :key="`list-1-item-${i}-item-${j}`">
+        <div class="col-lg-6 d-flex flex-column gap-3">
+          <div v-for="(arr, i) in LIST2" :key="`list-1-item-${i}`" class="items d-flex align-items-center flex-wrap gap-3">
+            <div class="skill bg-white text-black" v-for="(item, j) in arr" :key="`list-1-item-${i}-item-${j}`">
               {{ item }}
             </div>
           </div>
@@ -59,3 +59,18 @@ const LIST2 = [
   ['Programming printers', 'Browser Extension', 'Cordova']
 ]
 </script>
+
+<style lang="scss" scoped>
+.skill {
+  display: inline-block;
+  padding: 5px 15px;
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 30px;
+  font-size: 14px;
+
+  @media screen and (max-width: 768px) {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+}
+</style>
