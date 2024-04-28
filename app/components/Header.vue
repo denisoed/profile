@@ -5,7 +5,7 @@
         <div class="col-lg-3 col-6 order1">
           <div class="bord">
             <!-- Logo -->
-            <a class="logo icon-img-70" href="#">
+            <a class="logo" href="#">
               Denisoed
             </a>
           </div>
@@ -32,9 +32,7 @@
         <div class="col-lg-3 col-6 order2">
           <div class="bord d-flex justify-content-end align-items-center">
             <SocialLinks class="desktop-social-links" />
-            <button class="navbar-toggler" type="button">
-              <span class="icon-bar"><i class="fas fa-bars"></i></span>
-            </button>
+            <BurgerBtn class="navbar-toggler" />
           </div>
         </div>
       </div>
@@ -70,6 +68,12 @@ const LINKS = [
 
     @media screen and (max-width: 992px) {
       display: flex !important;
+    }
+  }
+
+  .bord {
+    @media screen and (max-width: 420px) {
+      padding: 8px 15px;
     }
   }
 
