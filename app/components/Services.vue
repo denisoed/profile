@@ -66,7 +66,7 @@ const SERVICES = [
   },
   {
     step: '#3',
-    title: 'SEO optimization',
+    title: 'SEO',
     desc: 'Strategically enhancing the web application`s performance and visibility by implementing advanced SEO techniques for optimal search engine rankings.',
     img: img3,
     class: 'icon-img-50',
