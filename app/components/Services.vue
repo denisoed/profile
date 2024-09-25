@@ -10,7 +10,7 @@
                 <h2 class="fz-16">My Services</h2>
               </div>
             </div>
-            <h3>What Services I Provide ?</h3>
+            <h3>What Services I Provide?</h3>
           </div>
         </div>
       </div>

@@ -7,7 +7,7 @@
             <div class="d-inline-block">
               <div class="sub-title-icon d-flex align-items-center">
                 <span class="icon pe-7s-portfolio"></span>
-                <h2 class="fz-16">My Resume</h2>
+                <h2 class="fz-16">My Experience</h2>
               </div>
             </div>
             <h3>Education & Experience</h3>
