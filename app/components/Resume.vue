@@ -16,7 +16,7 @@
         </div>
       </div>
     </div>
-    <div class="container">
+    <div class="resume2-container container position-relative" :class="{ 'show-all': showAll }">
       <div class="row">
         <div class="col-lg-6">
           <div class="resume-clumn">
@@ -55,11 +55,29 @@
           </div>
         </div>
       </div>
+      <div class="gradient-overlay" v-if="!showAll"></div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center mt-40">
+          <button @click="toggleShowAll" class="btn-curve btn-lit">
+            <span>{{ showAll ? 'Show Less' : 'Show All' }}</span>
+          </button>
+        </div>
+      </div>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue'
+
+const showAll = ref(false)
+
+const toggleShowAll = () => {
+  showAll.value = !showAll.value
+}
+
 const LIST1 = [
   {
     date: 'Jan 2025 - Mar 2025',
@@ -318,6 +336,41 @@ const LIST2 = [
         left: 50%;
         transform: translate(-50%, -50%);
         letter-spacing: normal;
+      }
+    }
+  }
+
+  .gradient-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    background: linear-gradient(to bottom, transparent, #0c0c0c);
+    pointer-events: none;
+  }
+
+  .btn-curve {
+    position: relative;
+    z-index: 1;
+    padding: 10px 20px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.03);
+  }
+
+  &-container {
+    &:not(.show-all) {
+      max-height: 800px;
+      overflow: hidden;
+      transition: max-height 0.5s ease-in-out;
+      margin-bottom: 40px;
+
+      @media (max-width: 768px) {
+        max-height: 1000px;
       }
     }
   }
