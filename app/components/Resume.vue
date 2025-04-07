@@ -11,6 +11,7 @@
               </div>
             </div>
             <h3>Education & Experience</h3>
+            <p class="mt-20 fz-16 opacity-8">Full-stack frontend developer with expertise in the entire development lifecycle, from initial concept to production deployment. Specialized in building responsive, SEO-optimized applications with modern frameworks, focusing on clean architecture and maintainable code.</p>
           </div>
         </div>
       </div>
