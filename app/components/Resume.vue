@@ -55,7 +55,31 @@
 <script setup lang="ts">
 const LIST1 = [
   {
-    date: 'Mar 2023 - Present',
+    date: 'Jan 2025 - Mar 2025',
+    projectName: 'AI platform',
+    technology: 'Typescript, Vue 3, Quasar',
+    description: 'AI platform where artists and their communities co-create digital content using AI tools. It simplifies fan engagement and reward sharing.',
+    responsibilities: [
+      'Assisted in project development',
+      'Implemented mobile-responsive design adaptations',
+      'Configured SEO optimizations'
+    ]
+  },
+  {
+    date: 'May 2024 - Jan 2025',
+    projectName: 'Telegram Mini App',
+    technology: 'Typescript, Vue 3, Quasar',
+    description: 'A Telegram mini application designed for token farming and management, featuring seamless integration with Telegram\'s ecosystem.',
+    responsibilities: [
+      'Lead a front-end development team',
+      'Collaborated with customers to gather requirements and provide regular updates',
+      'Integrated Telegram Bot API features including authentication, payment, and notifications',
+      'Developed responsive features optimized for both mobile and desktop platforms',
+      'Performed unit testing and end-to-end testing of components',
+    ]
+  },
+  {
+    date: 'Mar 2023 - May 2024',
     projectName: 'NFT Marketplace',
     technology: 'Typescript, Vue 3, Quasar',
     description: 'Blockchain-based online platform to sell and buy non-fungible tokens (NFTs).',
@@ -131,6 +155,9 @@ const LIST1 = [
       'Setup React Apollo Client',
     ],
   },
+]
+
+const LIST2 = [
   {
     date: 'Feb 2020 - Oct 2020',
     projectName: 'Edentity',
@@ -142,9 +169,6 @@ const LIST1 = [
       'Setup unit, component, integration tests. Setup json server for tests',
     ],
   },
-]
-
-const LIST2 = [
   {
     date: 'Jan 2020 – Feb 2020',
     projectName: 'Simplonpass',
