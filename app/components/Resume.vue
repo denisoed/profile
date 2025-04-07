@@ -20,6 +20,9 @@
         <div class="col-lg-6">
           <div class="resume-clumn">
             <div v-for="(item, i) in LIST1" :key="`list-1-item-${i}`" class="items mb-40">
+              <div class="timeline-dot">
+                <span class="dot-number">{{ (LIST2.length + LIST1.length) - i }}</span>
+              </div>
               <div class="date fz-14">{{ item.date }}</div>
               <div class="fz-18 fw-bold">{{ item.projectName }}</div>
               <span class="opacity-8 fw-bold mt-10">[ {{ item.technology }} ]</span>
@@ -35,6 +38,9 @@
         <div class="col-lg-6">
           <div class="resume-clumn">
             <div v-for="(item, i) in LIST2" :key="`list-2-item-${i}`" class="items mb-40">
+              <div class="timeline-dot">
+                <span class="dot-number">{{ LIST2.length - i }}</span>
+              </div>
               <div class="date fz-14">{{ item.date }}</div>
               <div class="fz-18 fw-bold">{{ item.projectName }}</div>
               <span class="opacity-8 fw-bold mt-10">[ {{ item.technology }} ]</span>
@@ -58,7 +64,7 @@ const LIST1 = [
     date: 'Jan 2025 - Mar 2025',
     projectName: 'AI platform',
     technology: 'Typescript, Vue 3, Quasar',
-    description: 'AI platform where artists and their communities co-create digital content using AI tools. It simplifies fan engagement and reward sharing.',
+    description: 'A collaborative AI-powered platform enabling artists and their fans to create digital content together, streamlining community interaction and revenue distribution.',
     responsibilities: [
       'Assisted in project development',
       'Implemented mobile-responsive design adaptations',
@@ -275,6 +281,43 @@ const LIST2 = [
       line-height: 1.5;
       color: #fff;
       list-style: disc;
+    }
+  }
+
+  .items {
+    position: relative;
+    padding-left: 30px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 18px;
+      height: 18px;
+      background: var(--maincolor);
+      border-radius: 50%;
+      transform: translateX(-9px);
+
+      .dot-number {
+        color: #000;
+        font-size: 10px;
+        font-weight: bold;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        letter-spacing: normal;
+      }
     }
   }
 }
