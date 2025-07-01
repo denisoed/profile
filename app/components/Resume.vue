@@ -80,6 +80,19 @@ const toggleShowAll = () => {
 
 const LIST1 = [
   {
+    date: 'Mar 2025 - Jun 2025',
+    projectName: 'Check Trusty',
+    technology: 'Typescript, React, Next.js',
+    description: 'Home improvement platform connecting homeowners with verified experts across 100+ services. Features location-based search, expert ratings, and instant communication.',
+    responsibilities: [
+      'Developed and implemented new interactive features to enhance user experience',
+      'Optimized website performance through code splitting and lazy loading techniques',
+      'Refactored legacy codebase, improving loading times by 40% and maintainability',
+      'Integrated advanced search and filtering capabilities for expert matching',
+      'Collaborated with UX/UI team to implement responsive design improvements'
+    ]
+  },
+  {
     date: 'Jan 2025 - Mar 2025',
     projectName: 'AI platform',
     technology: 'Typescript, Vue 3, Quasar',
