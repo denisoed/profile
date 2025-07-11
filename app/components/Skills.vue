@@ -46,7 +46,8 @@ const LIST1 = [
   ['Git', 'Jira', 'Figma', 'Miro'],
   ['HTML5', 'Pug/Jade', 'CSS3', 'Sass/Scss'],
   ['Bootstrap', 'Vuetify', 'Quasar', 'Chakra UI'],
-  ['Unit testing(jest)', 'Integration testings(cypress)']
+  ['Unit testing(jest)', 'Integration testings(cypress)'],
+  ['Telegram Mini Apps', 'Telegram Bots']
 ]
 
 const LIST2 = [
@@ -56,7 +57,8 @@ const LIST2 = [
   ['SQL', 'Python', 'Django'],
   ['Linux', 'Docker', 'Docker Compose', 'Gitlab CI/CD'],
   ['Strapi', 'Prismic'],
-  ['Programming printers', 'Browser Extension', 'Cordova']
+  ['Programming printers', 'Browser Extension', 'Cordova'],
+  ['Samsung TV', 'LG TV', 'Android TV'],
 ]
 </script>
 
