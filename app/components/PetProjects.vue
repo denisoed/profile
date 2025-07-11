@@ -97,6 +97,14 @@ const PROJECTS = [
     img: 'https://raw.githubusercontent.com/denisoed/sklad_front/main/preview.png',
     link: 'https://github.com/denisoed/sklad_front',
     wowDelay: '1s'
+  },
+  {
+    title: 'TV Timer',
+    description: 'A simple and convenient timer application designed for TV screens. Allows users to select a preset time interval, start a countdown, pause, reset, and return to the main screen easily.',
+    tag: 'Github',
+    img: 'https://github.com/denisoed/tv-timer/raw/main/public/banner.png',
+    link: 'https://github.com/denisoed/tv-timer',
+    wowDelay: '1.2s'
   }
 ]
 </script>
