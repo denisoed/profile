@@ -20,7 +20,7 @@
           <a
             v-for="(project, index) in PROJECTS"
             :key="`project-${index}`"
-            class="col-lg-4 items wow fadeIn"
+            class="col-lg-4 items wow fadeIn project-item"
             :href="project.link"
             target="_blank"
             :data-wow-delay="project.wowDelay"
@@ -30,13 +30,13 @@
                 <img v-if="project.img" :src="project.img" alt="">
                 <img v-else src="assets/imgs/works/1.jpg" alt="">
               </div>
-              <div class="cont d-flex align-items-center">
+              <div class="cont d-flex align-items-end project-content">
                 <div>
                   <h6>{{ project.title }}</h6>
                   <p>{{ project.description }}</p>
-                  <span class="tag mt-3">{{ project.tag }}</span>
+                  <span class="tag mt-3 mb-0">{{ project.tag }}</span>
                 </div>
-                <div class="ml-auto">
+                <div class="project-link ml-auto">
                   <div class="arrow">
                     <svg class="arrow-right" xmlns="http://www.w3.org/2000/svg"
                       xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 34.2 32.3"
@@ -108,3 +108,18 @@ const PROJECTS = [
   }
 ]
 </script>
+
+<style scoped lang="scss">
+.project-content {
+  width: 100%;
+  position: relative;
+}
+
+.project-link {
+  width: 45px;
+  height: 45px;
+  // position: absolute;
+  // right: 10px;
+  // bottom: 10px;
+}
+</style>
