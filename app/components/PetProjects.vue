@@ -27,8 +27,13 @@
           >
             <div class="item">
               <div class="img">
-                <img v-if="project.img" :src="project.img" alt="">
-                <img v-else src="assets/imgs/works/1.jpg" alt="">
+                <img
+                  :src="project?.img || 'assets/imgs/works/1.jpg'"
+                  :alt="project?.title || 'project image'"
+                  loading="lazy"
+                  fetchpriority="low"
+                  decoding="async"
+                >
               </div>
               <div class="cont d-flex align-items-end project-content">
                 <div>
