@@ -30,9 +30,6 @@
                 <img
                   :src="project?.img || 'assets/imgs/works/1.jpg'"
                   :alt="project?.title || 'project image'"
-                  loading="lazy"
-                  fetchpriority="low"
-                  decoding="async"
                 >
               </div>
               <div class="cont d-flex align-items-end project-content">
