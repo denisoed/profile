@@ -69,12 +69,20 @@ const PROJECTS = [
     wowDelay: '0.2s'
   },
   {
+    title: 'BrainUp',
+    tag: 'Github',
+    description: 'Modern web application for developing cognitive abilities through engaging games and exercises. Helps improve attention, memory, logical thinking, and speech skills.',
+    img: 'https://raw.githubusercontent.com/denisoed/BrainUp/main/public/banner.png?token=GHSAT0AAAAAADGSPCB23V26DYIKAZZ5OPOM2D533TA',
+    link: 'https://github.com/denisoed/BrainUp',
+    wowDelay: '0.4s'
+  },
+  {
     title: 'Obsidian Orthography',
     tag: 'Github',
     description: 'The Obsidian plugin for checking grammar and correcting spelling errors in text.',
     img: 'https://raw.githubusercontent.com/denisoed/obsidian-orthography/master/preview.gif',
     link: 'https://github.com/denisoed/obsidian-orthography',
-    wowDelay: '0.4s'
+    wowDelay: '0.6s'
   },
   {
     title: 'SEO Analyzer',
@@ -82,7 +90,7 @@ const PROJECTS = [
     tag: 'Github',
     img: 'https://raw.githubusercontent.com/maddevsio/seo-analyzer/master/preview.png',
     link: 'https://github.com/maddevsio/seo-analyzer',
-    wowDelay: '0.6s'
+    wowDelay: '0.8s'
   },
   {
     title: 'Dead Code Checker',
@@ -90,7 +98,7 @@ const PROJECTS = [
     tag: 'Github',
     img: 'https://raw.githubusercontent.com/denisoed/dead-code-checker/main/preview.webp',
     link: 'https://github.com/denisoed/dead-code-checker',
-    wowDelay: '0.8s'
+    wowDelay: '1s'
   },
   {
     title: 'Box Stacker',
@@ -98,7 +106,7 @@ const PROJECTS = [
     tag: 'Github',
     img: 'https://raw.githubusercontent.com/denisoed/box-stacker/main/preview.png',
     link: 'https://github.com/denisoed/box-stacker',
-    wowDelay: '1s'
+    wowDelay: '1.2s'
   },
   {
     title: 'Sklad',
@@ -106,7 +114,7 @@ const PROJECTS = [
     tag: 'Github',
     img: 'https://raw.githubusercontent.com/denisoed/sklad_front/main/preview.png',
     link: 'https://github.com/denisoed/sklad_front',
-    wowDelay: '1.2s'
+    wowDelay: '1.4s'
   },
   {
     title: 'TV Timer',
@@ -114,7 +122,7 @@ const PROJECTS = [
     tag: 'Github',
     img: 'https://github.com/denisoed/tv-timer/raw/main/public/banner.png',
     link: 'https://github.com/denisoed/tv-timer',
-    wowDelay: '1.4s'
+    wowDelay: '1.6s'
   }
 ]
 </script>
