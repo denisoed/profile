@@ -72,7 +72,7 @@ const PROJECTS = [
     title: 'BrainUp',
     tag: 'Github',
     description: 'Modern web application for developing cognitive abilities through engaging games and exercises. Helps improve attention, memory, logical thinking, and speech skills.',
-    img: 'https://raw.githubusercontent.com/denisoed/BrainUp/main/public/banner.png?token=GHSAT0AAAAAADGSPCB23V26DYIKAZZ5OPOM2D533TA',
+    img: 'https://raw.githubusercontent.com/denisoed/BrainUp/refs/heads/main/public/banner.png',
     link: 'https://github.com/denisoed/BrainUp',
     wowDelay: '0.4s'
   },
