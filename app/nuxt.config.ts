@@ -2,6 +2,7 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   plugins: ['~/plugins/analytics.client.ts'],
+
   app: {
     head: {
       htmlAttrs: {
@@ -53,5 +54,7 @@ export default defineNuxtConfig({
         { key: 'twitter:site', name: 'twitter:site', content: '@denisoed' }
       ]
     }
-  }
+  },
+
+  compatibilityDate: '2025-07-21'
 });
