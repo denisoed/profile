@@ -12,7 +12,7 @@
             <div class="mt-50 d-flex align-items-center justify-content-center justify-content-lg-start">
               <div class="box-shadwo">
                 <div class="d-flex align-items-center">
-                  <span class="fz-60 fw-bold mr-10">{{ expirience }}</span>
+                  <span class="fz-60 fw-bold mr-10">{{ experience }}</span>
                   <span class="fz-16">Years of <br> Experiences</span>
                 </div>
               </div>
@@ -32,5 +32,5 @@
 <script setup lang="ts">
 const start = 2016;
 const end = new Date().getFullYear();
-const expirience = end - start;
+const experience = end - start;
 </script>

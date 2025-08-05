@@ -134,7 +134,7 @@ const LIST1 = [
   {
     date: 'Aug 2022 – Mar 2023',
     projectName: 'CryptoMarry',
-    technology: 'Typescrypt, React, Chakra UI',
+    technology: 'Typescript, React, Chakra UI',
     description: 'CryptoMarry is a Web3 platform that rediscovers how partners accumulate and manage their joint crypto assets.',
     responsibilities: [
       'Refactoring existing code',
@@ -147,7 +147,7 @@ const LIST1 = [
   {
     date: 'Dec 2021 – Aug 2022',
     projectName: 'Enji.ai',
-    technology: 'Typescrypt, Vue.js, Quasar',
+    technology: 'Typescript, Vue.js, Quasar',
     description: 'Automation of internal processes of Mad Devs.',
     responsibilities: [
       'Developing a framework for sending SQL directly from the frontend',
@@ -156,7 +156,7 @@ const LIST1 = [
     ],
   },
   {
-    date: 'Juny 2021 – Dec 2021',
+    date: 'June 2021 – Dec 2021',
     projectName: 'Edentity',
     technology: 'Javascript, Vue.js, Cypress, Vuetify, Html, Scss',
     description: 'Widget for the car showroom and admin panel.',
@@ -168,7 +168,7 @@ const LIST1 = [
     ],
   },
   {
-    date: 'Dec 2020 – Juny 2021',
+    date: 'Dec 2020 – June 2021',
     projectName: 'Mad Devs v2',
     technology: 'Javascript, Nuxt.js, SSR, Prismic.js',
     description: 'Development of the new website for Mad Devs.',
