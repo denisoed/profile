@@ -1,7 +1,7 @@
 <template>
   <div class="app">
     <Head>
-      <Title>Denis Grushkin - Web Enginer</Title>
+      <Title>Denis Grushkin - Web Engineer</Title>
       <Meta name="description" content="My objective is to foster business growth through the adoption of cutting-edge technologies." />
       <Link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
       <Link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
