@@ -1,7 +1,7 @@
 <template>
   <ul class="social-links d-flex align-items-center rest">
     <li>
-      <a href="https://telegram.me/denisoed" target="_blank" aria-label="Telegram link">
+      <a href="https://t.me/denisoed" target="_blank" aria-label="Telegram link">
         <i class="fab fa-telegram"></i>
       </a>
     </li>
