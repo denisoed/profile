@@ -61,12 +61,20 @@
 <script setup lang="ts">
 const PROJECTS = [
   {
+    title: 'AI Corp',
+    tag: 'Github',
+    description: 'Experimental AI agent company dashboard for orchestrating workspace-scoped agents, tasks, roles, Telegram bots, cron jobs, and pipeline-style automation.',
+    img: 'https://raw.githubusercontent.com/denisoed/ai-corp/main/public/banner.png',
+    link: 'https://github.com/denisoed/ai-corp',
+    wowDelay: '0.2s'
+  },
+  {
     title: 'Exara AI Assistant',
     tag: 'Github',
     description: 'Exara is an AI-powered browser extension that instantly explains unfamiliar words and terms directly on web pages. Simply highlight text to get an explanation—no need to lose context or open new tabs.',
     img: 'https://raw.githubusercontent.com/denisoed/exara-landing/refs/heads/main/public/banner.png',
     link: 'https://github.com/denisoed/exara-landing',
-    wowDelay: '0.2s'
+    wowDelay: '0.4s'
   },
   {
     title: 'BrainUp',
@@ -74,7 +82,7 @@ const PROJECTS = [
     description: 'Modern web application for developing cognitive abilities through engaging games and exercises. Helps improve attention, memory, logical thinking, and speech skills.',
     img: 'https://raw.githubusercontent.com/denisoed/BrainUp/refs/heads/main/public/banner.png',
     link: 'https://github.com/denisoed/BrainUp',
-    wowDelay: '0.4s'
+    wowDelay: '0.6s'
   },
   {
     title: 'Obsidian Orthography',
@@ -82,7 +90,7 @@ const PROJECTS = [
     description: 'The Obsidian plugin for checking grammar and correcting spelling errors in text.',
     img: 'https://raw.githubusercontent.com/denisoed/obsidian-orthography/master/preview.gif',
     link: 'https://github.com/denisoed/obsidian-orthography',
-    wowDelay: '0.6s'
+    wowDelay: '0.8s'
   },
   {
     title: 'SEO Analyzer',
@@ -90,7 +98,7 @@ const PROJECTS = [
     tag: 'Github',
     img: 'https://raw.githubusercontent.com/maddevsio/seo-analyzer/master/preview.png',
     link: 'https://github.com/maddevsio/seo-analyzer',
-    wowDelay: '0.8s'
+    wowDelay: '1.0s'
   },
   {
     title: 'Dead Code Checker',
@@ -98,7 +106,7 @@ const PROJECTS = [
     tag: 'Github',
     img: 'https://raw.githubusercontent.com/denisoed/dead-code-checker/main/preview.webp',
     link: 'https://github.com/denisoed/dead-code-checker',
-    wowDelay: '1s'
+    wowDelay: '1.2s'
   },
   {
     title: 'Box Stacker',
@@ -106,7 +114,7 @@ const PROJECTS = [
     tag: 'Github',
     img: 'https://raw.githubusercontent.com/denisoed/box-stacker/main/preview.png',
     link: 'https://github.com/denisoed/box-stacker',
-    wowDelay: '1.2s'
+    wowDelay: '1.4s'
   },
   {
     title: 'Sklad',
@@ -114,7 +122,7 @@ const PROJECTS = [
     tag: 'Github',
     img: 'https://raw.githubusercontent.com/denisoed/sklad_front/main/preview.png',
     link: 'https://github.com/denisoed/sklad_front',
-    wowDelay: '1.4s'
+    wowDelay: '1.6s'
   },
   {
     title: 'TV Timer',
@@ -122,7 +130,7 @@ const PROJECTS = [
     tag: 'Github',
     img: 'https://github.com/denisoed/tv-timer/raw/main/public/banner.png',
     link: 'https://github.com/denisoed/tv-timer',
-    wowDelay: '1.6s'
+    wowDelay: '1.8s'
   }
 ]
 </script>
