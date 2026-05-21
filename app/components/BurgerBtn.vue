@@ -14,11 +14,11 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue';
+import { ref } from "vue";
 
 const opened = ref(false);
 function toggle() {
-  opened.value = !opened.value
+  opened.value = !opened.value;
 }
 </script>
 
@@ -31,10 +31,10 @@ function toggle() {
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
   transform: rotate(0deg);
-  -webkit-transition: .5s ease-in-out;
-  -moz-transition: .5s ease-in-out;
-  -o-transition: .5s ease-in-out;
-  transition: .5s ease-in-out;
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
   cursor: pointer;
   background: none;
   box-shadow: none;
@@ -53,10 +53,10 @@ function toggle() {
     -moz-transform: rotate(0deg);
     -o-transform: rotate(0deg);
     transform: rotate(0deg);
-    -webkit-transition: .25s ease-in-out;
-    -moz-transition: .25s ease-in-out;
-    -o-transition: .25s ease-in-out;
-    transition: .25s ease-in-out;
+    -webkit-transition: 0.25s ease-in-out;
+    -moz-transition: 0.25s ease-in-out;
+    -o-transition: 0.25s ease-in-out;
+    transition: 0.25s ease-in-out;
 
     &:nth-child(1) {
       top: 0px;
@@ -66,7 +66,7 @@ function toggle() {
     &:nth-child(3) {
       top: 6px;
     }
-    
+
     &:nth-child(4) {
       top: 12px;
     }
@@ -78,26 +78,26 @@ function toggle() {
       width: 0%;
       left: 50%;
     }
-  
+
     &:nth-child(2) {
       -webkit-transform: rotate(45deg);
       -moz-transform: rotate(45deg);
       -o-transform: rotate(45deg);
       transform: rotate(45deg);
     }
-    
+
     &:nth-child(3) {
       -webkit-transform: rotate(-45deg);
       -moz-transform: rotate(-45deg);
       -o-transform: rotate(-45deg);
       transform: rotate(-45deg);
     }
-    
+
     &:nth-child(4) {
       top: 6px;
       width: 0%;
       left: 50%;
     }
-  } 
+  }
 }
 </style>

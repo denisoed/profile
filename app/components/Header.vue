@@ -5,9 +5,7 @@
         <div class="col-lg-3 col-6 order1">
           <div class="bord">
             <!-- Logo -->
-            <a class="logo" href="#">
-              Denisoed
-            </a>
+            <a class="logo" href="#"> Denisoed </a>
           </div>
         </div>
         <div class="col-lg-6 order3">
@@ -16,13 +14,19 @@
             <div class="full-width">
               <ul class="navbar-nav">
                 <li class="nav-item">
-                  <a class="nav-link" href="#home" data-scroll-nav="0"><span class="rolling-text">Home</span></a>
+                  <a class="nav-link" href="#home" data-scroll-nav="0"
+                    ><span class="rolling-text">Home</span></a
+                  >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#services" data-scroll-nav="1"><span class="rolling-text">Services</span></a>
+                  <a class="nav-link" href="#services" data-scroll-nav="1"
+                    ><span class="rolling-text">Services</span></a
+                  >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#experience" data-scroll-nav="2"><span class="rolling-text">Experiences</span></a>
+                  <a class="nav-link" href="#experience" data-scroll-nav="2"
+                    ><span class="rolling-text">Experiences</span></a
+                  >
                 </li>
               </ul>
               <SocialLinks class="mobile-social-links ml-10 mt-10" />
@@ -43,14 +47,14 @@
 <script setup lang="ts">
 const LINKS = [
   {
-    name: 'Home',
-    link: '#banner',
+    name: "Home",
+    link: "#banner",
   },
   {
-    name: 'About',
-    link: '#about',
+    name: "About",
+    link: "#about",
   },
-]
+];
 </script>
 
 <style lang="scss" scoped>
@@ -60,7 +64,7 @@ const LINKS = [
     font-weight: 700;
     font-size: 18px;
     text-transform: uppercase;
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: "Plus Jakarta Sans", sans-serif;
   }
 
   .mobile-social-links {

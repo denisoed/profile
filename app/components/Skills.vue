@@ -36,12 +36,16 @@
                 class="skill-badge"
                 :style="{ '--i': i }"
               >
-              <img
-                v-if="skill.icon"
-                :src="skill.color ? `https://cdn.simpleicons.org/${skill.icon}/${skill.color}` : `https://cdn.simpleicons.org/${skill.icon}`"
-                :alt="skill.name"
-                class="skill-badge__icon"
-              />
+                <img
+                  v-if="skill.icon"
+                  :src="
+                    skill.color
+                      ? `https://cdn.simpleicons.org/${skill.icon}/${skill.color}`
+                      : `https://cdn.simpleicons.org/${skill.icon}`
+                  "
+                  :alt="skill.name"
+                  class="skill-badge__icon"
+                />
                 <span class="skill-badge__label">{{ skill.name }}</span>
               </div>
             </div>
@@ -53,127 +57,127 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { ref, onMounted } from "vue";
 
 interface Skill {
-  name: string
-  icon: string | null
-  color?: string
+  name: string;
+  icon: string | null;
+  color?: string;
 }
 
 interface SkillGroup {
-  title: string
-  items: Skill[]
+  title: string;
+  items: Skill[];
 }
 
 const skillGroups: SkillGroup[] = [
   {
-    title: 'Frontend',
+    title: "Frontend",
     items: [
-      { name: 'JavaScript', icon: 'javascript' },
-      { name: 'TypeScript', icon: 'typescript' },
-      { name: 'Vue.js', icon: 'vuedotjs' },
-      { name: 'Nuxt.js', icon: 'nuxt' },
-      { name: 'React.js', icon: 'react' },
-      { name: 'Next.js', icon: 'nextdotjs', color: 'white' },
-      { name: 'HTML5', icon: 'html5' },
-      { name: 'CSS3', icon: 'css' },
-      { name: 'Sass/Scss', icon: 'sass' },
-      { name: 'Pug/Jade', icon: 'pug' },
+      { name: "JavaScript", icon: "javascript" },
+      { name: "TypeScript", icon: "typescript" },
+      { name: "Vue.js", icon: "vuedotjs" },
+      { name: "Nuxt.js", icon: "nuxt" },
+      { name: "React.js", icon: "react" },
+      { name: "Next.js", icon: "nextdotjs", color: "white" },
+      { name: "HTML5", icon: "html5" },
+      { name: "CSS3", icon: "css" },
+      { name: "Sass/Scss", icon: "sass" },
+      { name: "Pug/Jade", icon: "pug" },
     ],
   },
   {
-    title: 'UI & Design',
+    title: "UI & Design",
     items: [
-      { name: 'Bootstrap', icon: 'bootstrap' },
-      { name: 'Vuetify', icon: 'vuetify' },
-      { name: 'Quasar', icon: 'quasar', color: 'white' },
-      { name: 'Chakra UI', icon: 'chakraui' },
-      { name: 'Figma', icon: 'figma' },
+      { name: "Bootstrap", icon: "bootstrap" },
+      { name: "Vuetify", icon: "vuetify" },
+      { name: "Quasar", icon: "quasar", color: "white" },
+      { name: "Chakra UI", icon: "chakraui" },
+      { name: "Figma", icon: "figma" },
     ],
   },
   {
-    title: 'Backend & Database',
+    title: "Backend & Database",
     items: [
-      { name: 'REST API', icon: null },
-      { name: 'GraphQl', icon: 'graphql' },
-      { name: 'Apollo', icon: 'apollographql' },
-      { name: 'Node.js', icon: 'nodedotjs' },
-      { name: 'Express.js', icon: 'express', color: 'white' },
-      { name: 'MongoDB', icon: 'mongodb' },
-      { name: 'SQL', icon: null },
-      { name: 'Python', icon: 'python' },
-      { name: 'Django', icon: 'django' },
-      { name: 'PHP', icon: 'php' },
-      { name: 'Yii2', icon: 'yii' },
-      { name: 'WordPress', icon: 'wordpress' },
-      { name: 'PostgreSQL', icon: 'postgresql' },
+      { name: "REST API", icon: null },
+      { name: "GraphQl", icon: "graphql" },
+      { name: "Apollo", icon: "apollographql" },
+      { name: "Node.js", icon: "nodedotjs" },
+      { name: "Express.js", icon: "express", color: "white" },
+      { name: "MongoDB", icon: "mongodb" },
+      { name: "SQL", icon: null },
+      { name: "Python", icon: "python" },
+      { name: "Django", icon: "django" },
+      { name: "PHP", icon: "php" },
+      { name: "Yii2", icon: "yii" },
+      { name: "WordPress", icon: "wordpress" },
+      { name: "PostgreSQL", icon: "postgresql" },
     ],
   },
   {
-    title: 'Build & DevOps',
+    title: "Build & DevOps",
     items: [
-      { name: 'SSR', icon: null },
-      { name: 'SSG', icon: null },
-      { name: 'SPA', icon: null },
-      { name: 'PWA', icon: null },
-      { name: 'Vite', icon: 'vite' },
-      { name: 'Webpack', icon: 'webpack' },
-      { name: 'Rollup', icon: 'rollupdotjs' },
-      { name: 'Gulp', icon: 'gulp' },
-      { name: 'Git', icon: 'git' },
-      { name: 'Linux', icon: 'linux' },
-      { name: 'Docker', icon: 'docker' },
-      { name: 'Docker Compose', icon: null },
-      { name: 'Gitlab CI/CD', icon: 'gitlab' },
+      { name: "SSR", icon: null },
+      { name: "SSG", icon: null },
+      { name: "SPA", icon: null },
+      { name: "PWA", icon: null },
+      { name: "Vite", icon: "vite" },
+      { name: "Webpack", icon: "webpack" },
+      { name: "Rollup", icon: "rollupdotjs" },
+      { name: "Gulp", icon: "gulp" },
+      { name: "Git", icon: "git" },
+      { name: "Linux", icon: "linux" },
+      { name: "Docker", icon: "docker" },
+      { name: "Docker Compose", icon: null },
+      { name: "Gitlab CI/CD", icon: "gitlab" },
     ],
   },
   {
-    title: 'Platforms & Services',
+    title: "Platforms & Services",
     items: [
-      { name: 'Supabase', icon: 'supabase' },
-      { name: 'Strapi', icon: 'strapi' },
-      { name: 'Prismic', icon: 'prismic' },
-      { name: 'Jira', icon: 'jira' },
-      { name: 'Miro', icon: 'miro', color: 'white' },
-      { name: 'Stripe', icon: 'stripe' },
-      { name: 'JWT', icon: 'jsonwebtokens' },
-      { name: 'Capacitor', icon: 'capacitor' },
-      { name: 'Telegram Mini Apps', icon: 'telegram' },
-      { name: 'Telegram Bots', icon: 'telegram' },
+      { name: "Supabase", icon: "supabase" },
+      { name: "Strapi", icon: "strapi" },
+      { name: "Prismic", icon: "prismic" },
+      { name: "Jira", icon: "jira" },
+      { name: "Miro", icon: "miro", color: "white" },
+      { name: "Stripe", icon: "stripe" },
+      { name: "JWT", icon: "jsonwebtokens" },
+      { name: "Capacitor", icon: "capacitor" },
+      { name: "Telegram Mini Apps", icon: "telegram" },
+      { name: "Telegram Bots", icon: "telegram" },
     ],
   },
   {
-    title: 'Testing & More',
+    title: "Testing & More",
     items: [
-      { name: 'Unit testing(jest)', icon: 'jest' },
-      { name: 'Integration testings(cypress)', icon: 'cypress' },
-      { name: 'Web 3', icon: null },
-      { name: 'Ethereum', icon: 'ethereum' },
-      { name: 'Programming printers', icon: null },
-      { name: 'Browser Extension', icon: null },
-      { name: 'Samsung TV', icon: 'samsung' },
-      { name: 'LG TV', icon: 'lg' },
-      { name: 'Android TV', icon: 'android' },
+      { name: "Unit testing(jest)", icon: "jest" },
+      { name: "Integration testings(cypress)", icon: "cypress" },
+      { name: "Web 3", icon: null },
+      { name: "Ethereum", icon: "ethereum" },
+      { name: "Programming printers", icon: null },
+      { name: "Browser Extension", icon: null },
+      { name: "Samsung TV", icon: "samsung" },
+      { name: "LG TV", icon: "lg" },
+      { name: "Android TV", icon: "android" },
     ],
   },
-]
+];
 
-const sectionRef = ref<HTMLElement | null>(null)
-const isVisible = ref(false)
+const sectionRef = ref<HTMLElement | null>(null);
+const isVisible = ref(false);
 
 onMounted(() => {
   const observer = new IntersectionObserver(
     ([entry]) => {
       if (entry.isIntersecting) {
-        isVisible.value = true
-        observer.disconnect()
+        isVisible.value = true;
+        observer.disconnect();
       }
     },
     { threshold: 0.1 },
-  )
-  if (sectionRef.value) observer.observe(sectionRef.value)
-})
+  );
+  if (sectionRef.value) observer.observe(sectionRef.value);
+});
 </script>
 
 <style lang="scss" scoped>
@@ -206,7 +210,9 @@ onMounted(() => {
   border-radius: 16px;
   background: rgba(255, 255, 255, 0.015);
   backdrop-filter: blur(6px);
-  transition: border-color 0.4s ease, box-shadow 0.4s ease;
+  transition:
+    border-color 0.4s ease,
+    box-shadow 0.4s ease;
   height: 100%;
 
   &:hover {
@@ -241,7 +247,11 @@ onMounted(() => {
   font-size: 13px;
   line-height: 1.4;
   cursor: default;
-  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
   opacity: 0;
   transform: translateY(16px);
 

@@ -1,5 +1,4 @@
 
-
 /* Services
 -----------------------------------------------------------------*/
 
@@ -9,6 +8,7 @@
         padding: 50px 30px;
         position: relative;
         border-radius: 10px;
+        transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
         &.bord{
             border: 1px solid rgba(255, 255, 255, 0.1);
@@ -35,6 +35,7 @@
             background-color: #0c0c0c;
             pointer-events: none;
             border-radius: 10px;
+            transition: opacity 0.4s ease;
         }
 
         &:after{
@@ -48,6 +49,13 @@
             z-index: -1;
             pointer-events: none;
             border-radius: 10px;
+            transition: background 0.4s ease;
+        }
+
+        &:hover{
+            &:after{
+                background: linear-gradient(140deg, rgba(108, 92, 231, 0.4), rgba(108, 92, 231, 0.05));
+            }
         }
     }
 
@@ -59,8 +67,14 @@
             &:before{
                 background: linear-gradient(120deg, rgba(255,255,255,0.24), rgba(255,255,255,0.04));
                 opacity: 0.3;
+                transition: opacity 0.4s ease;
+            }
+
+            &:hover{
+                &:before{
+                    opacity: 0.5;
+                }
             }
         }
     }
 }
-

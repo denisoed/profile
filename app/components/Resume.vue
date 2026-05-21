@@ -11,25 +11,45 @@
               </div>
             </div>
             <h3>Education & Experience</h3>
-            <p class="mt-20 fz-16 opacity-8">Full-stack frontend developer with expertise in the entire development lifecycle, from initial concept to production deployment. Specialized in building responsive, SEO-optimized applications with modern frameworks, focusing on clean architecture and maintainable code.</p>
+            <p class="mt-20 fz-16 opacity-8">
+              Full-stack frontend developer with expertise in the entire
+              development lifecycle, from initial concept to production
+              deployment. Specialized in building responsive, SEO-optimized
+              applications with modern frameworks, focusing on clean
+              architecture and maintainable code.
+            </p>
           </div>
         </div>
       </div>
     </div>
-    <div class="resume2-container container position-relative" :class="{ 'show-all': showAll }">
+    <div
+      class="resume2-container container position-relative"
+      :class="{ 'show-all': showAll }"
+    >
       <div class="row">
         <div class="col-lg-6">
           <div class="resume-clumn">
-            <div v-for="(item, i) in LIST1" :key="`list-1-item-${i}`" class="items mb-40">
+            <div
+              v-for="(item, i) in LIST1"
+              :key="`list-1-item-${i}`"
+              class="items mb-40"
+            >
               <div class="timeline-dot">
-                <span class="dot-number">{{ (LIST2.length + LIST1.length) - i }}</span>
+                <span class="dot-number">{{
+                  LIST2.length + LIST1.length - i
+                }}</span>
               </div>
               <div class="date fz-14">{{ item.date }}</div>
               <div class="fz-18 fw-bold">{{ item.projectName }}</div>
-              <span class="opacity-8 fw-bold mt-10">[ {{ item.technology }} ]</span>
+              <span class="opacity-8 fw-bold mt-10"
+                >[ {{ item.technology }} ]</span
+              >
               <p class="fz-14 mt-10">{{ item.description }}</p>
               <ul class="list-responsibility mt-10 mb-0">
-                <li v-for="(resp, j) in item.responsibilities" :key="`list-1-item-${i}-resp-${j}`">
+                <li
+                  v-for="(resp, j) in item.responsibilities"
+                  :key="`list-1-item-${i}-resp-${j}`"
+                >
                   {{ resp }}
                 </li>
               </ul>
@@ -38,16 +58,25 @@
         </div>
         <div class="col-lg-6">
           <div class="resume-clumn">
-            <div v-for="(item, i) in LIST2" :key="`list-2-item-${i}`" class="items mb-40">
+            <div
+              v-for="(item, i) in LIST2"
+              :key="`list-2-item-${i}`"
+              class="items mb-40"
+            >
               <div class="timeline-dot">
                 <span class="dot-number">{{ LIST2.length - i }}</span>
               </div>
               <div class="date fz-14">{{ item.date }}</div>
               <div class="fz-18 fw-bold">{{ item.projectName }}</div>
-              <span class="opacity-8 fw-bold mt-10">[ {{ item.technology }} ]</span>
+              <span class="opacity-8 fw-bold mt-10"
+                >[ {{ item.technology }} ]</span
+              >
               <p class="fz-14 mt-10">{{ item.description }}</p>
               <ul class="list-responsibility mt-10 mb-0">
-                <li v-for="(resp, j) in item.responsibilities" :key="`list-2-item-${i}-resp-${j}`">
+                <li
+                  v-for="(resp, j) in item.responsibilities"
+                  :key="`list-2-item-${i}-resp-${j}`"
+                >
                   {{ resp }}
                 </li>
               </ul>
@@ -55,13 +84,13 @@
           </div>
         </div>
       </div>
-      <div class="gradient-overlay" v-if="!showAll"></div>
+      <div v-if="!showAll" class="gradient-overlay"></div>
     </div>
     <div class="container">
       <div class="row">
         <div class="col-12 text-center mt-40">
-          <button @click="toggleShowAll" class="btn-curve btn-lit">
-            <span>{{ showAll ? 'Show Less' : 'Show All' }}</span>
+          <button class="btn-curve btn-lit" @click="toggleShowAll">
+            <span>{{ showAll ? "Show Less" : "Show All" }}</span>
           </button>
         </div>
       </div>
@@ -70,263 +99,269 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref } from "vue";
 
-const showAll = ref(false)
+const showAll = ref(false);
 
 const toggleShowAll = () => {
-  showAll.value = !showAll.value
-}
+  showAll.value = !showAll.value;
+};
 
 const LIST1 = [
   {
-    date: 'Feb 2026 - May 2026',
-    projectName: 'Enji.ai',
-    technology: 'TypeScript, Vue 3, Python',
-    description: 'Full-stack development of a delivery intelligence platform using AI agents for code generation and bug fixing.',
+    date: "Feb 2026 - May 2026",
+    projectName: "Enji.ai",
+    technology: "TypeScript, Vue 3, Python",
+    description:
+      "Full-stack development of a delivery intelligence platform using AI agents for code generation and bug fixing.",
     responsibilities: [
-      'Fixed over 20 bugs using OpenClaw AI agent via Telegram chat',
-      'Generated all code exclusively through AI agents',
-      'Refined existing functionality and developed new features',
-      'Worked across the full stack with TypeScript, Vue 3, and Python'
-    ]
-  },
-  {
-    date: 'Sep 2025 - Feb 2026',
-    projectName: 'GuestSpot',
-    technology: 'TypeScript, Capacitor, Vue 3, Strapi API',
-    description: 'Discover the best tattoo artists and studios in your area. Book appointments, view portfolios, and create your perfect tattoo experience.',
-    responsibilities: [
-      'Built a cross-platform mobile app using Vue 3 and Capacitor',
-      'Implemented artist/studio search, portfolios, and appointment booking',
-      'Integrated Strapi backend API for content management',
-      'Configured and published the app to both iOS App Store and Google Play',
-      'Developed the project from scratch over 5 months'
-    ]
-  },
-  {
-    date: 'Mar 2025 - Jun 2025',
-    projectName: 'Check Trusty',
-    technology: 'Typescript, React, Next.js',
-    description: 'Home improvement platform connecting homeowners with verified experts across 100+ services. Features location-based search, expert ratings, and instant communication.',
-    responsibilities: [
-      'Developed and implemented new interactive features to enhance user experience',
-      'Optimized website performance through code splitting and lazy loading techniques',
-      'Refactored legacy codebase, improving loading times by 40% and maintainability',
-      'Integrated advanced search and filtering capabilities for expert matching',
-      'Collaborated with UX/UI team to implement responsive design improvements'
-    ]
-  },
-  {
-    date: 'Jan 2025 - Mar 2025',
-    projectName: 'AI platform',
-    technology: 'Typescript, Vue 3, Quasar',
-    description: 'A collaborative AI-powered platform enabling artists and their fans to create digital content together, streamlining community interaction and revenue distribution.',
-    responsibilities: [
-      'Assisted in project development',
-      'Implemented mobile-responsive design adaptations',
-      'Configured SEO optimizations'
-    ]
-  },
-  {
-    date: 'May 2024 - Jan 2025',
-    projectName: 'Telegram Mini App',
-    technology: 'Typescript, Vue 3, Quasar',
-    description: 'A Telegram mini application designed for token farming and management, featuring seamless integration with Telegram\'s ecosystem.',
-    responsibilities: [
-      'Lead a front-end development team',
-      'Collaborated with customers to gather requirements and provide regular updates',
-      'Integrated Telegram Bot API features including authentication, payment, and notifications',
-      'Developed responsive features optimized for both mobile and desktop platforms',
-      'Performed unit testing and end-to-end testing of components',
-    ]
-  },
-  {
-    date: 'Mar 2023 - May 2024',
-    projectName: 'NFT Marketplace',
-    technology: 'Typescript, Vue 3, Quasar',
-    description: 'Blockchain-based online platform to sell and buy non-fungible tokens (NFTs).',
-    responsibilities: [
-      'Lead a front-end development team',
-      'Communication with customers',
-      'Setting up a project from scratch',
-      'Setting up SSR for SEO',
-      'Development of features',
-      'Creating a wallet for the marketplace',
-      'Testing of components'
-    ]
-  },
-  {
-    date: 'Aug 2022 – Mar 2023',
-    projectName: 'CryptoMarry',
-    technology: 'Typescript, React, Chakra UI',
-    description: 'CryptoMarry is a Web3 platform that rediscovers how partners accumulate and manage their joint crypto assets.',
-    responsibilities: [
-      'Refactoring existing code',
-      'Setting up SSR(Next.js) for SEO',
-      'Connecting MetaMask for transactions',
-      'Development of features',
-      'Testing of components',
+      "Fixed over 20 bugs using OpenClaw AI agent via Telegram chat",
+      "Generated all code exclusively through AI agents",
+      "Refined existing functionality and developed new features",
+      "Worked across the full stack with TypeScript, Vue 3, and Python",
     ],
   },
   {
-    date: 'Dec 2021 – Aug 2022',
-    projectName: 'Enji.ai',
-    technology: 'Typescript, Vue.js, Quasar',
-    description: 'Automation of internal processes of Mad Devs.',
+    date: "Sep 2025 - Feb 2026",
+    projectName: "GuestSpot",
+    technology: "TypeScript, Capacitor, Vue 3, Strapi API",
+    description:
+      "Discover the best tattoo artists and studios in your area. Book appointments, view portfolios, and create your perfect tattoo experience.",
     responsibilities: [
-      'Developing a framework for sending SQL directly from the frontend',
-      'Development of new features, support',
-      'Testing of components',
+      "Built a cross-platform mobile app using Vue 3 and Capacitor",
+      "Implemented artist/studio search, portfolios, and appointment booking",
+      "Integrated Strapi backend API for content management",
+      "Configured and published the app to both iOS App Store and Google Play",
+      "Developed the project from scratch over 5 months",
     ],
   },
   {
-    date: 'June 2021 – Dec 2021',
-    projectName: 'Edentity',
-    technology: 'Javascript, Vue.js, Cypress, Vuetify, Html, Scss',
-    description: 'Widget for the car showroom and admin panel.',
+    date: "Mar 2025 - Jun 2025",
+    projectName: "Check Trusty",
+    technology: "Typescript, React, Next.js",
+    description:
+      "Home improvement platform connecting homeowners with verified experts across 100+ services. Features location-based search, expert ratings, and instant communication.",
     responsibilities: [
-      'Creating a car store',
-      'Creating a widget for integrating the store into other dealers\' websites',
-      'Development of new features, support',
-      'Testing of components',
+      "Developed and implemented new interactive features to enhance user experience",
+      "Optimized website performance through code splitting and lazy loading techniques",
+      "Refactored legacy codebase, improving loading times by 40% and maintainability",
+      "Integrated advanced search and filtering capabilities for expert matching",
+      "Collaborated with UX/UI team to implement responsive design improvements",
     ],
   },
-]
+  {
+    date: "Jan 2025 - Mar 2025",
+    projectName: "AI platform",
+    technology: "Typescript, Vue 3, Quasar",
+    description:
+      "A collaborative AI-powered platform enabling artists and their fans to create digital content together, streamlining community interaction and revenue distribution.",
+    responsibilities: [
+      "Assisted in project development",
+      "Implemented mobile-responsive design adaptations",
+      "Configured SEO optimizations",
+    ],
+  },
+  {
+    date: "May 2024 - Jan 2025",
+    projectName: "Telegram Mini App",
+    technology: "Typescript, Vue 3, Quasar",
+    description:
+      "A Telegram mini application designed for token farming and management, featuring seamless integration with Telegram's ecosystem.",
+    responsibilities: [
+      "Lead a front-end development team",
+      "Collaborated with customers to gather requirements and provide regular updates",
+      "Integrated Telegram Bot API features including authentication, payment, and notifications",
+      "Developed responsive features optimized for both mobile and desktop platforms",
+      "Performed unit testing and end-to-end testing of components",
+    ],
+  },
+  {
+    date: "Mar 2023 - May 2024",
+    projectName: "NFT Marketplace",
+    technology: "Typescript, Vue 3, Quasar",
+    description:
+      "Blockchain-based online platform to sell and buy non-fungible tokens (NFTs).",
+    responsibilities: [
+      "Lead a front-end development team",
+      "Communication with customers",
+      "Setting up a project from scratch",
+      "Setting up SSR for SEO",
+      "Development of features",
+      "Creating a wallet for the marketplace",
+      "Testing of components",
+    ],
+  },
+  {
+    date: "Aug 2022 – Mar 2023",
+    projectName: "CryptoMarry",
+    technology: "Typescript, React, Chakra UI",
+    description:
+      "CryptoMarry is a Web3 platform that rediscovers how partners accumulate and manage their joint crypto assets.",
+    responsibilities: [
+      "Refactoring existing code",
+      "Setting up SSR(Next.js) for SEO",
+      "Connecting MetaMask for transactions",
+      "Development of features",
+      "Testing of components",
+    ],
+  },
+  {
+    date: "Dec 2021 – Aug 2022",
+    projectName: "Enji.ai",
+    technology: "Typescript, Vue.js, Quasar",
+    description: "Automation of internal processes of Mad Devs.",
+    responsibilities: [
+      "Developing a framework for sending SQL directly from the frontend",
+      "Development of new features, support",
+      "Testing of components",
+    ],
+  },
+  {
+    date: "June 2021 – Dec 2021",
+    projectName: "Edentity",
+    technology: "Javascript, Vue.js, Cypress, Vuetify, Html, Scss",
+    description: "Widget for the car showroom and admin panel.",
+    responsibilities: [
+      "Creating a car store",
+      "Creating a widget for integrating the store into other dealers' websites",
+      "Development of new features, support",
+      "Testing of components",
+    ],
+  },
+];
 
 const LIST2 = [
   {
-    date: 'Dec 2020 – June 2021',
-    projectName: 'Mad Devs v2',
-    technology: 'Javascript, Nuxt.js, SSR, Prismic.js',
-    description: 'Development of the new website for Mad Devs.',
+    date: "Dec 2020 – June 2021",
+    projectName: "Mad Devs v2",
+    technology: "Javascript, Nuxt.js, SSR, Prismic.js",
+    description: "Development of the new website for Mad Devs.",
     responsibilities: [
-      'Migration from Vue 2 to Nuxt.js',
-      'Setting up SSR for SEO',
-      'Connecting and configuring Prismic.js',
-      'Refactoring, optimization, accessibility',
-      'Development of new features, support',
-      'Testing of components',
+      "Migration from Vue 2 to Nuxt.js",
+      "Setting up SSR for SEO",
+      "Connecting and configuring Prismic.js",
+      "Refactoring, optimization, accessibility",
+      "Development of new features, support",
+      "Testing of components",
     ],
   },
   {
-    date: 'Oct 2020 – Dec 2020',
-    projectName: 'IotHub',
-    technology: 'Javascript, React.js, Apollo client, Stripe.js',
-    description: 'IoT Hub is a system for organizing centralized configuration management and security checks of IoT devices (mainly intended for office work and companies): printers, UPS, routers, etc.',
+    date: "Oct 2020 – Dec 2020",
+    projectName: "IotHub",
+    technology: "Javascript, React.js, Apollo client, Stripe.js",
+    description:
+      "IoT Hub is a system for organizing centralized configuration management and security checks of IoT devices (mainly intended for office work and companies): printers, UPS, routers, etc.",
     responsibilities: [
-      'Development of new features, support',
-      'Testing of components',
-      'Connecting and configuring Stripe.js',
-      'Setup React Apollo Client',
+      "Development of new features, support",
+      "Testing of components",
+      "Connecting and configuring Stripe.js",
+      "Setup React Apollo Client",
     ],
   },
   {
-    date: 'Feb 2020 - Oct 2020',
-    projectName: 'Edentity',
-    technology: 'Javascript, Vue.js, Cypress, Vuetify, Html, Scss',
-    description: 'Developing a widget for the car showroom and admin panel',
+    date: "Feb 2020 - Oct 2020",
+    projectName: "Edentity",
+    technology: "Javascript, Vue.js, Cypress, Vuetify, Html, Scss",
+    description: "Developing a widget for the car showroom and admin panel",
     responsibilities: [
-      'Widget development for websites without using html iframe',
-      'Layout of the admin panel for the widget via Vuetify',
-      'Setup unit, component, integration tests. Setup json server for tests',
+      "Widget development for websites without using html iframe",
+      "Layout of the admin panel for the widget via Vuetify",
+      "Setup unit, component, integration tests. Setup json server for tests",
     ],
   },
   {
-    date: 'Jan 2020 – Feb 2020',
-    projectName: 'Simplonpass',
-    technology: 'Javascript, React.js, Html, Scss',
-    description: 'Service for hiring companies, creating contracts, bonds, etc.',
+    date: "Jan 2020 – Feb 2020",
+    projectName: "Simplonpass",
+    technology: "Javascript, React.js, Html, Scss",
+    description:
+      "Service for hiring companies, creating contracts, bonds, etc.",
+    responsibilities: ["Development assistance", "Setup JWT authentication"],
+  },
+  {
+    date: "Dec 2019 – Jan 2020",
+    projectName: "Iview",
+    technology: "PWA, Javascript, React.js, Html, Scss",
+    description: "Service for viewing traffic jams on alleys, using cameras",
+    responsibilities: ["Project layout from scratch", "PWA Setup"],
+  },
+  {
+    date: "Jan 2019 - Dec 2019",
+    projectName: "KICKEX",
+    technology: "Javascript, Vue.js, Pug, Scss",
+    description:
+      "KickEx - a cryptocurrency exchange with smart orders and low trading commissions.",
     responsibilities: [
-      'Development assistance',
-      'Setup JWT authentication',
+      "Project layout from scratch, create components, adding a dark theme",
+      "Setup tradingview charts.",
     ],
   },
   {
-    date: 'Dec 2019 – Jan 2020',
-    projectName: 'Iview',
-    technology: 'PWA, Javascript, React.js, Html, Scss',
-    description: 'Service for viewing traffic jams on alleys, using cameras',
+    date: "Aug 2018 - Jul 2019",
+    projectName: "Nappy Club",
+    technology: "PHP, Yii2, Html, Scss",
+    description: "Sale of diapers throughout Russia",
     responsibilities: [
-      'Project layout from scratch',
-      'PWA Setup',
+      "Development of new features, support.",
+      "HTML letter layout.",
+      "Writing integration tests for fronted.",
     ],
   },
   {
-    date: 'Jan 2019 - Dec 2019',
-    projectName: 'KICKEX',
-    technology: 'Javascript, Vue.js, Pug, Scss',
-    description: 'KickEx - a cryptocurrency exchange with smart orders and low trading commissions.',
+    date: "Jul 2018 - Aug 2018",
+    projectName: "Website for Mad Devs",
+    technology: "Javascript, Vue.js, Html, Scss",
+    description: "Development of the official website for Mad Devs",
     responsibilities: [
-      'Project layout from scratch, create components, adding a dark theme',
-      'Setup tradingview charts.',
+      "The layout of the new design for the website of the company Mad Devs.",
+      "Migrating MD site from Vue.js to Nuxt.js framework",
     ],
   },
   {
-    date: 'Aug 2018 - Jul 2019',
-    projectName: 'Nappy Club',
-    technology: 'PHP, Yii2, Html, Scss',
-    description: 'Sale of diapers throughout Russia',
+    date: "May 2018 - Jul 2018",
+    projectName: "PekloTool",
+    technology: "Javascript, Vue.js, HTML, Scss",
+    description: "Generation of contextual advertising",
     responsibilities: [
-      'Development of new features, support.',
-      'HTML letter layout.',
-      'Writing integration tests for fronted.',
+      "Development of new feature, Support.",
+      "Server api integration on the client side.",
     ],
   },
   {
-    date: 'Jul 2018 - Aug 2018',
-    projectName: 'Website for Mad Devs',
-    technology: 'Javascript, Vue.js, Html, Scss',
-    description: 'Development of the official website for Mad Devs',
+    date: "Feb 2018 - May 2018",
+    projectName: "Silkroadexplore, ShowMeBishkek",
+    technology: "PHP, Wordpress, HTML, CSS, Javascript",
+    description: "Organization of tours in Kyrgyzstan",
     responsibilities: [
-      'The layout of the new design for the website of the company Mad Devs.',
-      'Migrating MD site from Vue.js to Nuxt.js framework',
+      "Development of new feature, Support.",
+      "Deploy code to production via FTP FileZilla.",
+      "Creation of new blocks on the pages, without the involvement of the designer.",
     ],
   },
   {
-    date: 'May 2018 - Jul 2018',
-    projectName: 'PekloTool',
-    technology: 'Javascript, Vue.js, HTML, Scss',
-    description: 'Generation of contextual advertising',
+    date: "Jan 2018 – Feb 2018",
+    projectName: "Mad Location Manager",
+    technology: "Gulp, Javascript, Html, Sass, Pug",
+    description:
+      'This is library for GPS and Accelerometer data "fusion" with Kalman filter',
     responsibilities: [
-      'Development of new feature, Support.',
-      'Server api integration on the client side.',
+      "Setup project from scratch",
+      "Setup Gulp tasks for production",
+      "Added multi-language functional without using plugins.",
     ],
   },
   {
-    date: 'Feb 2018 - May 2018',
-    projectName: 'Silkroadexplore, ShowMeBishkek',
-    technology: 'PHP, Wordpress, HTML, CSS, Javascript',
-    description: 'Organization of tours in Kyrgyzstan',
+    date: "Oct 2017 - Jan 2018",
+    projectName: "Mad Devs internship programm",
+    technology: "Python, Django, PosgreSQL, Javascript, HTML, CSS",
+    description:
+      "Development of an internal project for sending spam to different services.",
     responsibilities: [
-      'Development of new feature, Support.',
-      'Deploy code to production via FTP FileZilla.',
-      'Creation of new blocks on the pages, without the involvement of the designer.',
+      "Learning Django, Python, PosgreSQL, Javascript, HTML, CSS",
+      "Development of a Telegram bot for finding mentors",
+      "Writing unit and integration tests for Django.",
     ],
   },
-  {
-    date: 'Jan 2018 – Feb 2018',
-    projectName: 'Mad Location Manager',
-    technology: 'Gulp, Javascript, Html, Sass, Pug',
-    description: 'This is library for GPS and Accelerometer data "fusion" with Kalman filter',
-    responsibilities: [
-      'Setup project from scratch',
-      'Setup Gulp tasks for production',
-      'Added multi-language functional without using plugins.',
-    ],
-  },
-  {
-    date: 'Oct 2017 - Jan 2018',
-    projectName: 'Mad Devs internship programm',
-    technology: 'Python, Django, PosgreSQL, Javascript, HTML, CSS',
-    description: 'Development of an internal project for sending spam to different services.',
-    responsibilities: [
-      'Learning Django, Python, PosgreSQL, Javascript, HTML, CSS',
-      'Development of a Telegram bot for finding mentors',
-      'Writing unit and integration tests for Django.',
-    ],
-  },
-]
+];
 </script>
 
 <style lang="scss" scoped>
@@ -346,7 +381,7 @@ const LIST2 = [
     padding-left: 30px;
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       left: 0;
       top: 0;
