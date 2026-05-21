@@ -56,7 +56,7 @@ const LIST2 = [
   ['Node.js', 'Express.js', 'MongoDB'],
   ['SQL', 'Python', 'Django'],
   ['Linux', 'Docker', 'Docker Compose', 'Gitlab CI/CD'],
-  ['Strapi', 'Prismic'],
+  ['Supabase', 'Strapi', 'Prismic'],
   ['Programming printers', 'Browser Extension', 'Cordova'],
   ['Samsung TV', 'LG TV', 'Android TV'],
 ]

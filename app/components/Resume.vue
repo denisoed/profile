@@ -80,6 +80,31 @@ const toggleShowAll = () => {
 
 const LIST1 = [
   {
+    date: 'Feb 2026 - May 2026',
+    projectName: 'Enji.ai',
+    technology: 'TypeScript, Vue 3, Python',
+    description: 'Full-stack development of a delivery intelligence platform using AI agents for code generation and bug fixing.',
+    responsibilities: [
+      'Fixed over 20 bugs using OpenClaw AI agent via Telegram chat',
+      'Generated all code exclusively through AI agents',
+      'Refined existing functionality and developed new features',
+      'Worked across the full stack with TypeScript, Vue 3, and Python'
+    ]
+  },
+  {
+    date: 'Sep 2025 - Feb 2026',
+    projectName: 'GuestSpot',
+    technology: 'TypeScript, Capacitor, Vue 3, Strapi API',
+    description: 'Discover the best tattoo artists and studios in your area. Book appointments, view portfolios, and create your perfect tattoo experience.',
+    responsibilities: [
+      'Built a cross-platform mobile app using Vue 3 and Capacitor',
+      'Implemented artist/studio search, portfolios, and appointment booking',
+      'Integrated Strapi backend API for content management',
+      'Configured and published the app to both iOS App Store and Google Play',
+      'Developed the project from scratch over 5 months'
+    ]
+  },
+  {
     date: 'Mar 2025 - Jun 2025',
     projectName: 'Check Trusty',
     technology: 'Typescript, React, Next.js',
@@ -167,6 +192,9 @@ const LIST1 = [
       'Testing of components',
     ],
   },
+]
+
+const LIST2 = [
   {
     date: 'Dec 2020 – June 2021',
     projectName: 'Mad Devs v2',
@@ -193,9 +221,6 @@ const LIST1 = [
       'Setup React Apollo Client',
     ],
   },
-]
-
-const LIST2 = [
   {
     date: 'Feb 2020 - Oct 2020',
     projectName: 'Edentity',
