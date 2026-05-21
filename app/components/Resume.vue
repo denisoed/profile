@@ -7,10 +7,10 @@
             <div class="d-inline-block">
               <div class="sub-title-icon d-flex align-items-center">
                 <span class="icon pe-7s-portfolio"></span>
-                <h2 class="fz-16">My Experience</h2>
+                <h2 class="fz-16">My Work</h2>
               </div>
             </div>
-            <h3>Education & Experience</h3>
+            <h3>Project Experience</h3>
             <p class="mt-20 fz-16 opacity-8">
               Full-stack frontend developer with expertise in the entire
               development lifecycle, from initial concept to production
@@ -35,15 +35,18 @@
               class="items mb-40"
             >
               <div class="timeline-dot">
-                <span class="dot-number">{{
-                  LIST2.length + LIST1.length - i
-                }}</span>
+                <span class="dot-number">{{ totalItems - i }}</span>
               </div>
               <div class="date fz-14">{{ item.date }}</div>
               <div class="fz-18 fw-bold">{{ item.projectName }}</div>
-              <span class="opacity-8 fw-bold mt-10"
-                >[ {{ item.technology }} ]</span
-              >
+              <div class="role fz-14">{{ item.role }}</div>
+              <div class="tech-list mt-10">
+                <span
+                  v-for="(tech, k) in item.technology.split(', ')"
+                  :key="`tech-1-${i}-${k}`"
+                  class="tech-tag"
+                >{{ tech }}</span>
+              </div>
               <p class="fz-14 mt-10">{{ item.description }}</p>
               <ul class="list-responsibility mt-10 mb-0">
                 <li
@@ -68,9 +71,14 @@
               </div>
               <div class="date fz-14">{{ item.date }}</div>
               <div class="fz-18 fw-bold">{{ item.projectName }}</div>
-              <span class="opacity-8 fw-bold mt-10"
-                >[ {{ item.technology }} ]</span
-              >
+              <div class="role fz-14">{{ item.role }}</div>
+              <div class="tech-list mt-10">
+                <span
+                  v-for="(tech, k) in item.technology.split(', ')"
+                  :key="`tech-2-${i}-${k}`"
+                  class="tech-tag"
+                >{{ tech }}</span>
+              </div>
               <p class="fz-14 mt-10">{{ item.description }}</p>
               <ul class="list-responsibility mt-10 mb-0">
                 <li
@@ -99,7 +107,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref, computed } from "vue";
 
 const showAll = ref(false);
 
@@ -107,10 +115,13 @@ const toggleShowAll = () => {
   showAll.value = !showAll.value;
 };
 
+const totalItems = computed(() => LIST1.length + LIST2.length);
+
 const LIST1 = [
   {
-    date: "Feb 2026 - May 2026",
+    date: "Feb 2026 – May 2026",
     projectName: "Enji.ai",
+    role: "Full-stack Developer",
     technology: "TypeScript, Vue 3, Python",
     description:
       "Full-stack development of a delivery intelligence platform using AI agents for code generation and bug fixing.",
@@ -122,8 +133,9 @@ const LIST1 = [
     ],
   },
   {
-    date: "Sep 2025 - Feb 2026",
+    date: "Sep 2025 – Feb 2026",
     projectName: "GuestSpot",
+    role: "Frontend Developer",
     technology: "TypeScript, Capacitor, Vue 3, Strapi API",
     description:
       "Discover the best tattoo artists and studios in your area. Book appointments, view portfolios, and create your perfect tattoo experience.",
@@ -136,9 +148,10 @@ const LIST1 = [
     ],
   },
   {
-    date: "Mar 2025 - Jun 2025",
+    date: "Mar 2025 – Jun 2025",
     projectName: "Check Trusty",
-    technology: "Typescript, React, Next.js",
+    role: "Frontend Developer",
+    technology: "TypeScript, React, Next.js",
     description:
       "Home improvement platform connecting homeowners with verified experts across 100+ services. Features location-based search, expert ratings, and instant communication.",
     responsibilities: [
@@ -150,9 +163,10 @@ const LIST1 = [
     ],
   },
   {
-    date: "Jan 2025 - Mar 2025",
+    date: "Jan 2025 – Mar 2025",
     projectName: "AI platform",
-    technology: "Typescript, Vue 3, Quasar",
+    role: "Frontend Developer",
+    technology: "TypeScript, Vue 3, Quasar",
     description:
       "A collaborative AI-powered platform enabling artists and their fans to create digital content together, streamlining community interaction and revenue distribution.",
     responsibilities: [
@@ -162,9 +176,10 @@ const LIST1 = [
     ],
   },
   {
-    date: "May 2024 - Jan 2025",
+    date: "May 2024 – Jan 2025",
     projectName: "Telegram Mini App",
-    technology: "Typescript, Vue 3, Quasar",
+    role: "Lead Frontend Developer",
+    technology: "TypeScript, Vue 3, Quasar",
     description:
       "A Telegram mini application designed for token farming and management, featuring seamless integration with Telegram's ecosystem.",
     responsibilities: [
@@ -176,9 +191,10 @@ const LIST1 = [
     ],
   },
   {
-    date: "Mar 2023 - May 2024",
+    date: "Mar 2023 – May 2024",
     projectName: "NFT Marketplace",
-    technology: "Typescript, Vue 3, Quasar",
+    role: "Lead Frontend Developer",
+    technology: "TypeScript, Vue 3, Quasar",
     description:
       "Blockchain-based online platform to sell and buy non-fungible tokens (NFTs).",
     responsibilities: [
@@ -194,7 +210,8 @@ const LIST1 = [
   {
     date: "Aug 2022 – Mar 2023",
     projectName: "CryptoMarry",
-    technology: "Typescript, React, Chakra UI",
+    role: "Frontend Developer",
+    technology: "TypeScript, React, Chakra UI",
     description:
       "CryptoMarry is a Web3 platform that rediscovers how partners accumulate and manage their joint crypto assets.",
     responsibilities: [
@@ -208,7 +225,8 @@ const LIST1 = [
   {
     date: "Dec 2021 – Aug 2022",
     projectName: "Enji.ai",
-    technology: "Typescript, Vue.js, Quasar",
+    role: "Frontend Developer",
+    technology: "TypeScript, Vue.js, Quasar",
     description: "Automation of internal processes of Mad Devs.",
     responsibilities: [
       "Developing a framework for sending SQL directly from the frontend",
@@ -217,9 +235,10 @@ const LIST1 = [
     ],
   },
   {
-    date: "June 2021 – Dec 2021",
+    date: "Jun 2021 – Dec 2021",
     projectName: "Edentity",
-    technology: "Javascript, Vue.js, Cypress, Vuetify, Html, Scss",
+    role: "Frontend Developer",
+    technology: "JavaScript, Vue.js, Cypress, Vuetify, HTML, SCSS",
     description: "Widget for the car showroom and admin panel.",
     responsibilities: [
       "Creating a car store",
@@ -232,9 +251,10 @@ const LIST1 = [
 
 const LIST2 = [
   {
-    date: "Dec 2020 – June 2021",
+    date: "Dec 2020 – Jun 2021",
     projectName: "Mad Devs v2",
-    technology: "Javascript, Nuxt.js, SSR, Prismic.js",
+    role: "Frontend Developer",
+    technology: "JavaScript, Nuxt.js, SSR, Prismic.js",
     description: "Development of the new website for Mad Devs.",
     responsibilities: [
       "Migration from Vue 2 to Nuxt.js",
@@ -248,7 +268,8 @@ const LIST2 = [
   {
     date: "Oct 2020 – Dec 2020",
     projectName: "IotHub",
-    technology: "Javascript, React.js, Apollo client, Stripe.js",
+    role: "Frontend Developer",
+    technology: "JavaScript, React.js, Apollo Client, Stripe.js",
     description:
       "IoT Hub is a system for organizing centralized configuration management and security checks of IoT devices (mainly intended for office work and companies): printers, UPS, routers, etc.",
     responsibilities: [
@@ -259,9 +280,10 @@ const LIST2 = [
     ],
   },
   {
-    date: "Feb 2020 - Oct 2020",
+    date: "Feb 2020 – Oct 2020",
     projectName: "Edentity",
-    technology: "Javascript, Vue.js, Cypress, Vuetify, Html, Scss",
+    role: "Frontend Developer",
+    technology: "JavaScript, Vue.js, Cypress, Vuetify, HTML, SCSS",
     description: "Developing a widget for the car showroom and admin panel",
     responsibilities: [
       "Widget development for websites without using html iframe",
@@ -272,7 +294,8 @@ const LIST2 = [
   {
     date: "Jan 2020 – Feb 2020",
     projectName: "Simplonpass",
-    technology: "Javascript, React.js, Html, Scss",
+    role: "Frontend Developer",
+    technology: "JavaScript, React.js, HTML, SCSS",
     description:
       "Service for hiring companies, creating contracts, bonds, etc.",
     responsibilities: ["Development assistance", "Setup JWT authentication"],
@@ -280,14 +303,16 @@ const LIST2 = [
   {
     date: "Dec 2019 – Jan 2020",
     projectName: "Iview",
-    technology: "PWA, Javascript, React.js, Html, Scss",
+    role: "Frontend Developer",
+    technology: "PWA, JavaScript, React.js, HTML, SCSS",
     description: "Service for viewing traffic jams on alleys, using cameras",
     responsibilities: ["Project layout from scratch", "PWA Setup"],
   },
   {
-    date: "Jan 2019 - Dec 2019",
+    date: "Jan 2019 – Dec 2019",
     projectName: "KICKEX",
-    technology: "Javascript, Vue.js, Pug, Scss",
+    role: "Frontend Developer",
+    technology: "JavaScript, Vue.js, Pug, SCSS",
     description:
       "KickEx - a cryptocurrency exchange with smart orders and low trading commissions.",
     responsibilities: [
@@ -296,9 +321,10 @@ const LIST2 = [
     ],
   },
   {
-    date: "Aug 2018 - Jul 2019",
+    date: "Aug 2018 – Jul 2019",
     projectName: "Nappy Club",
-    technology: "PHP, Yii2, Html, Scss",
+    role: "Frontend Developer",
+    technology: "PHP, Yii2, HTML, SCSS",
     description: "Sale of diapers throughout Russia",
     responsibilities: [
       "Development of new features, support.",
@@ -307,9 +333,10 @@ const LIST2 = [
     ],
   },
   {
-    date: "Jul 2018 - Aug 2018",
+    date: "Jul 2018 – Aug 2018",
     projectName: "Website for Mad Devs",
-    technology: "Javascript, Vue.js, Html, Scss",
+    role: "Frontend Developer",
+    technology: "JavaScript, Vue.js, HTML, SCSS",
     description: "Development of the official website for Mad Devs",
     responsibilities: [
       "The layout of the new design for the website of the company Mad Devs.",
@@ -317,9 +344,10 @@ const LIST2 = [
     ],
   },
   {
-    date: "May 2018 - Jul 2018",
+    date: "May 2018 – Jul 2018",
     projectName: "PekloTool",
-    technology: "Javascript, Vue.js, HTML, Scss",
+    role: "Frontend Developer",
+    technology: "JavaScript, Vue.js, HTML, SCSS",
     description: "Generation of contextual advertising",
     responsibilities: [
       "Development of new feature, Support.",
@@ -327,9 +355,10 @@ const LIST2 = [
     ],
   },
   {
-    date: "Feb 2018 - May 2018",
+    date: "Feb 2018 – May 2018",
     projectName: "Silkroadexplore, ShowMeBishkek",
-    technology: "PHP, Wordpress, HTML, CSS, Javascript",
+    role: "WordPress Developer",
+    technology: "PHP, WordPress, HTML, CSS, JavaScript",
     description: "Organization of tours in Kyrgyzstan",
     responsibilities: [
       "Development of new feature, Support.",
@@ -340,7 +369,8 @@ const LIST2 = [
   {
     date: "Jan 2018 – Feb 2018",
     projectName: "Mad Location Manager",
-    technology: "Gulp, Javascript, Html, Sass, Pug",
+    role: "Frontend Developer",
+    technology: "Gulp, JavaScript, HTML, Sass, Pug",
     description:
       'This is library for GPS and Accelerometer data "fusion" with Kalman filter',
     responsibilities: [
@@ -350,9 +380,10 @@ const LIST2 = [
     ],
   },
   {
-    date: "Oct 2017 - Jan 2018",
-    projectName: "Mad Devs internship programm",
-    technology: "Python, Django, PosgreSQL, Javascript, HTML, CSS",
+    date: "Oct 2017 – Jan 2018",
+    projectName: "Mad Devs Internship Program",
+    role: "Intern",
+    technology: "Python, Django, PostgreSQL, JavaScript, HTML, CSS",
     description:
       "Development of an internal project for sending spam to different services.",
     responsibilities: [
@@ -411,6 +442,30 @@ const LIST2 = [
         letter-spacing: normal;
       }
     }
+  }
+
+  .role {
+    color: var(--maincolor);
+    font-weight: 600;
+    margin-top: 2px;
+  }
+
+  .tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 10px;
+  }
+
+  .tech-tag {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.4;
   }
 
   .gradient-overlay {
