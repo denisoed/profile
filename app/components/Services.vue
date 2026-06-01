@@ -104,7 +104,7 @@ import { SERVICES } from "~~/data/services";
 
     &:hover {
       transform: translateY(-8px);
-      box-shadow: 0 20px 60px rgba(108, 92, 231, 0.15);
+      box-shadow: 0 20px 60px rgba(236, 28, 36, 0.15);
 
       .services-card__watermark {
         opacity: 0.08;
@@ -187,8 +187,8 @@ import { SERVICES } from "~~/data/services";
       transition: all 0.3s ease;
 
       &:hover {
-        background: rgba(108, 92, 231, 0.2);
-        border-color: rgba(108, 92, 231, 0.4);
+        background: rgba(236, 28, 36, 0.2);
+        border-color: rgba(236, 28, 36, 0.4);
         color: #fff;
       }
     }
