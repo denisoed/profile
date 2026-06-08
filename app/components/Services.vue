@@ -7,16 +7,16 @@
             <div class="d-inline-block">
               <div class="sub-title-icon d-flex align-items-center">
                 <span class="icon pe-7s-box2"></span>
-                <h2 class="fz-16">My Services</h2>
+                <h2 class="fz-16">{{ $t('services.title') }}</h2>
               </div>
             </div>
-            <h3>What Services I Provide?</h3>
+            <h3>{{ $t('services.subtitle') }}</h3>
           </div>
         </div>
       </div>
       <div class="services-grid">
         <div
-          v-for="(service, index) in SERVICES"
+          v-for="(service, index) in localizedServices"
           :key="`service-${index}`"
           class="services-grid__item wow fadeIn"
           :data-wow-delay="service.delay"
@@ -34,7 +34,7 @@
                 <div class="services-card__step">{{ service.step }}</div>
               </div>
               <h4 class="services-card__title">{{ service.title }}</h4>
-              <p class="services-card__desc">{{ service.desc }}</p>
+              <p class="services-card__desc">{{ service.description }}</p>
               <div class="services-card__tags">
                 <span
                   v-for="(tag, tIdx) in service.tags"
@@ -48,13 +48,13 @@
         </div>
       </div>
       <div class="services-cta wow fadeIn" data-wow-delay=".7s">
-        <p class="services-cta__text">Have a project in mind?</p>
+        <p class="services-cta__text">{{ $t('services.cta') }}</p>
         <a
           href="https://t.me/denisoed"
           target="_blank"
           class="butn butn-md butn-bord"
         >
-          Let's work together
+          {{ $t('services.ctaButton') }}
         </a>
       </div>
     </div>
@@ -62,7 +62,18 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from "vue";
 import { SERVICES } from "~~/data/services";
+
+const { t } = useI18n()
+
+const localizedServices = computed(() =>
+  SERVICES.map((service, idx) => ({
+    ...service,
+    title: t(`services.items.${idx}.title`),
+    description: t(`services.items.${idx}.desc`),
+  }))
+)
 </script>
 
 <style lang="scss" scoped>

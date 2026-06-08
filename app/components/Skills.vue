@@ -11,10 +11,10 @@
             <div class="d-inline-block">
               <div class="sub-title-icon d-flex align-items-center">
                 <span class="icon pe-7s-tools"></span>
-                <h2 class="fz-16">My Skills</h2>
+                <h2 class="fz-16">{{ $t('skills.title') }}</h2>
               </div>
             </div>
-            <h3>A list of technologies I know and use</h3>
+            <h3>{{ $t('skills.subtitle') }}</h3>
           </div>
         </div>
       </div>
@@ -23,7 +23,7 @@
     <div class="container">
       <div class="skills-row">
         <div
-          v-for="(group, gIdx) in skillGroups"
+          v-for="(group, gIdx) in localizedSkillGroups"
           :key="gIdx"
           :style="{ '--g': gIdx }"
         >
@@ -57,7 +57,9 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from "vue";
+import { ref, computed, onMounted } from "vue";
+
+const { t } = useI18n()
 
 interface Skill {
   name: string;
@@ -162,6 +164,13 @@ const skillGroups: SkillGroup[] = [
     ],
   },
 ];
+
+const localizedSkillGroups = computed(() =>
+  skillGroups.map((group, idx) => ({
+    ...group,
+    title: t(`skills.groups.${idx}`),
+  }))
+)
 
 const sectionRef = ref<HTMLElement | null>(null);
 const isVisible = ref(false);

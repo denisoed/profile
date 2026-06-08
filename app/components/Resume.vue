@@ -7,16 +7,12 @@
             <div class="d-inline-block">
               <div class="sub-title-icon d-flex align-items-center">
                 <span class="icon pe-7s-portfolio"></span>
-                <h2 class="fz-16">My Work</h2>
+                <h2 class="fz-16">{{ $t('resume.title') }}</h2>
               </div>
             </div>
-            <h3>Project Experience</h3>
+            <h3>{{ $t('resume.subtitle') }}</h3>
             <p class="mt-20 fz-16 opacity-8">
-              Full-stack frontend developer with expertise in the entire
-              development lifecycle, from initial concept to production
-              deployment. Specialized in building responsive, SEO-optimized
-              applications with modern frameworks, focusing on clean
-              architecture and maintainable code.
+              {{ $t('resume.description') }}
             </p>
           </div>
         </div>
@@ -30,7 +26,7 @@
         <div class="col-lg-6">
           <div class="resume-clumn">
             <div
-              v-for="(item, i) in LIST1"
+              v-for="(item, i) in localizedList1"
               :key="`list-1-item-${i}`"
               class="items mb-40"
             >
@@ -62,7 +58,7 @@
         <div class="col-lg-6">
           <div class="resume-clumn">
             <div
-              v-for="(item, i) in LIST2"
+              v-for="(item, i) in localizedList2"
               :key="`list-2-item-${i}`"
               class="items mb-40"
             >
@@ -98,7 +94,7 @@
       <div class="row">
         <div class="col-12 text-center mt-40">
           <button class="btn-curve btn-lit" @click="toggleShowAll">
-            <span>{{ showAll ? "Show Less" : "Show All" }}</span>
+            <span>{{ showAll ? $t('resume.showLess') : $t('resume.showAll') }}</span>
           </button>
         </div>
       </div>
@@ -109,13 +105,13 @@
 <script setup lang="ts">
 import { ref, computed } from "vue";
 
+const { t } = useI18n()
+
 const showAll = ref(false);
 
 const toggleShowAll = () => {
   showAll.value = !showAll.value;
 };
-
-const totalItems = computed(() => LIST1.length + LIST2.length);
 
 const LIST1 = [
   {
@@ -409,6 +405,26 @@ const LIST2 = [
     ],
   },
 ];
+
+const localizedList1 = computed(() =>
+  LIST1.map((item, idx) => ({
+    ...item,
+    role: t(`resume.list1.${idx}.role`),
+    description: t(`resume.list1.${idx}.description`),
+    responsibilities: item.responsibilities.map((_, rIdx) => t(`resume.list1.${idx}.responsibilities.${rIdx}`)),
+  }))
+)
+
+const localizedList2 = computed(() =>
+  LIST2.map((item, idx) => ({
+    ...item,
+    role: t(`resume.list2.${idx}.role`),
+    description: t(`resume.list2.${idx}.description`),
+    responsibilities: item.responsibilities.map((_, rIdx) => t(`resume.list2.${idx}.responsibilities.${rIdx}`)),
+  }))
+)
+
+const totalItems = computed(() => LIST1.length + LIST2.length);
 </script>
 
 <style lang="scss" scoped>

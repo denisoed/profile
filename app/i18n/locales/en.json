@@ -1,0 +1,326 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "experiences": "Experiences"
+  },
+  "banner": {
+    "subtitle": "Web Engineer",
+    "greeting": "Hello, I'm",
+    "name": "Denis Grushkin",
+    "description": "My objective is to foster business growth through the adoption of cutting-edge technologies.",
+    "yearsOf": "Years of",
+    "experiences": "Experiences"
+  },
+  "services": {
+    "title": "My Services",
+    "subtitle": "What Services I Provide?",
+    "items": [
+      {
+        "title": "Building the Front-end",
+        "desc": "From design to fully functional web apps using Vue, React, and TypeScript — optimized for speed, accessibility, and scale."
+      },
+      {
+        "title": "Mobile Adaptation",
+        "desc": "Responsive, touch-friendly interfaces that work flawlessly on any device — mobile-first approach with PWA support."
+      },
+      {
+        "title": "SEO Optimization",
+        "desc": "SEO audits, semantic markup, structured data, and performance tuning to rank higher on Google and drive organic traffic."
+      },
+      {
+        "title": "Building the Back-end",
+        "desc": "Scalable APIs, server logic, and database design with Node.js, Python, and PostgreSQL — built for reliability and growth."
+      },
+      {
+        "title": "Admin Panel Setup",
+        "desc": "Custom admin dashboards and CMS integrations so you can manage content, users, and analytics without touching code."
+      },
+      {
+        "title": "Deploy to Production",
+        "desc": "CI/CD pipelines, Docker containers, and cloud infrastructure — deploy with confidence, zero downtime, and full monitoring."
+      }
+    ],
+    "cta": "Have a project in mind?",
+    "ctaButton": "Let's work together"
+  },
+  "petProjects": {
+    "title": "My Pet Projects",
+    "subtitle": "Some of my pet projects",
+    "items": [
+      {
+        "description": "Experimental AI agent company dashboard for orchestrating workspace-scoped agents, tasks, roles, Telegram bots, cron jobs, and pipeline-style automation."
+      },
+      {
+        "description": "Exara is an AI-powered browser extension that instantly explains unfamiliar words and terms directly on web pages. Simply highlight text to get an explanation — no need to lose context or open new tabs."
+      },
+      {
+        "description": "Modern web application for developing cognitive abilities through engaging games and exercises. Helps improve attention, memory, logical thinking, and speech skills."
+      },
+      {
+        "description": "The Obsidian plugin for checking grammar and correcting spelling errors in text."
+      },
+      {
+        "description": "The library for analyze a HTML file to show all of the SEO defects."
+      },
+      {
+        "description": "Dead Code Checker - is a tool for finding dead code in your JavaScript or TypeScript project. It helps to ensure a cleaner and more maintainable code base."
+      },
+      {
+        "description": "Here you can build incredible towers, earn points and exchange them for valuable coins that can become a real treasure!"
+      },
+      {
+        "description": "Your smart merchandise management assistant!"
+      },
+      {
+        "description": "A simple and convenient timer application designed for TV screens. Allows users to select a preset time interval, start a countdown, pause, reset, and return to the main screen easily."
+      }
+    ]
+  },
+  "resume": {
+    "title": "My Work",
+    "subtitle": "Project Experience",
+    "description": "Full-stack frontend developer with expertise in the entire development lifecycle, from initial concept to production deployment. Specialized in building responsive, SEO-optimized applications with modern frameworks, focusing on clean architecture and maintainable code.",
+    "showLess": "Show Less",
+    "showAll": "Show All",
+    "list1": [
+      {
+        "role": "Full-stack Developer",
+        "description": "Offline-first CRM and multi-channel messaging workspace for small businesses with AI-powered assistant, real-time WhatsApp/Telegram integration, and automatic conflict-free data synchronization.",
+        "responsibilities": [
+          "Deeply integrated AI assistant as an in-app helper for managing products, orders, shifts, and analytics",
+          "Added AI-powered auto-replier across WhatsApp and Telegram chats with custom presets",
+          "Built offline-first sync with field-level conflict resolution via RxDB + Supabase",
+          "Unified WhatsApp and Telegram messaging with optimistic sending and realtime delivery",
+          "Configured RevenueCat for in-app subscriptions and usage-based AI billing",
+          "Set up App Store Connect account, certificates, and published app to iOS App Store"
+        ]
+      },
+      {
+        "role": "Full-stack Developer",
+        "description": "Full-stack development of a delivery intelligence platform using AI agents for code generation and bug fixing.",
+        "responsibilities": [
+          "Fixed over 20 bugs using OpenClaw AI agent via Telegram chat",
+          "Generated all code exclusively through AI agents",
+          "Refined existing functionality and developed new features",
+          "Worked across the full stack with TypeScript, Vue 3, and Python"
+        ]
+      },
+      {
+        "role": "Frontend Developer",
+        "description": "Discover the best tattoo artists and studios in your area. Book appointments, view portfolios, and create your perfect tattoo experience.",
+        "responsibilities": [
+          "Built a cross-platform mobile app using Vue 3 and Capacitor",
+          "Implemented artist/studio search, portfolios, and appointment booking",
+          "Integrated Strapi backend API for content management",
+          "Configured and published the app to both iOS App Store and Google Play",
+          "Developed the project from scratch over 5 months"
+        ]
+      },
+      {
+        "role": "Frontend Developer",
+        "description": "Home improvement platform connecting homeowners with verified experts across 100+ services. Features location-based search, expert ratings, and instant communication.",
+        "responsibilities": [
+          "Developed and implemented new interactive features to enhance user experience",
+          "Optimized website performance through code splitting and lazy loading techniques",
+          "Refactored legacy codebase, improving loading times by 40% and maintainability",
+          "Integrated advanced search and filtering capabilities for expert matching",
+          "Collaborated with UX/UI team to implement responsive design improvements"
+        ]
+      },
+      {
+        "role": "Frontend Developer",
+        "description": "A collaborative AI-powered platform enabling artists and their fans to create digital content together, streamlining community interaction and revenue distribution.",
+        "responsibilities": [
+          "Assisted in project development",
+          "Implemented mobile-responsive design adaptations",
+          "Configured SEO optimizations"
+        ]
+      },
+      {
+        "role": "Lead Frontend Developer",
+        "description": "A Telegram mini application designed for token farming and management, featuring seamless integration with Telegram's ecosystem.",
+        "responsibilities": [
+          "Lead a front-end development team",
+          "Collaborated with customers to gather requirements and provide regular updates",
+          "Integrated Telegram Bot API features including authentication, payment, and notifications",
+          "Developed responsive features optimized for both mobile and desktop platforms",
+          "Performed unit testing and end-to-end testing of components"
+        ]
+      },
+      {
+        "role": "Lead Frontend Developer",
+        "description": "Blockchain-based online platform to sell and buy non-fungible tokens (NFTs).",
+        "responsibilities": [
+          "Lead a front-end development team",
+          "Communication with customers",
+          "Setting up a project from scratch",
+          "Setting up SSR for SEO",
+          "Development of features",
+          "Creating a wallet for the marketplace",
+          "Testing of components"
+        ]
+      },
+      {
+        "role": "Frontend Developer",
+        "description": "CryptoMarry is a Web3 platform that rediscovers how partners accumulate and manage their joint crypto assets.",
+        "responsibilities": [
+          "Refactoring existing code",
+          "Setting up SSR (Next.js) for SEO",
+          "Connecting MetaMask for transactions",
+          "Development of features",
+          "Testing of components"
+        ]
+      },
+      {
+        "role": "Frontend Developer",
+        "description": "Automation of internal processes of Mad Devs.",
+        "responsibilities": [
+          "Developing a framework for sending SQL directly from the frontend",
+          "Development of new features, support",
+          "Testing of components"
+        ]
+      },
+      {
+        "role": "Frontend Developer",
+        "description": "Widget for the car showroom and admin panel.",
+        "responsibilities": [
+          "Creating a car store",
+          "Creating a widget for integrating the store into other dealers' websites",
+          "Development of new features, support",
+          "Testing of components"
+        ]
+      }
+    ],
+    "list2": [
+      {
+        "role": "Frontend Developer",
+        "description": "Development of the new website for Mad Devs.",
+        "responsibilities": [
+          "Migration from Vue 2 to Nuxt.js",
+          "Setting up SSR for SEO",
+          "Connecting and configuring Prismic.js",
+          "Refactoring, optimization, accessibility",
+          "Development of new features, support",
+          "Testing of components"
+        ]
+      },
+      {
+        "role": "Frontend Developer",
+        "description": "IoT Hub is a system for organizing centralized configuration management and security checks of IoT devices (mainly intended for office work and companies): printers, UPS, routers, etc.",
+        "responsibilities": [
+          "Development of new features, support",
+          "Testing of components",
+          "Connecting and configuring Stripe.js",
+          "Setup React Apollo Client"
+        ]
+      },
+      {
+        "role": "Frontend Developer",
+        "description": "Developing a widget for the car showroom and admin panel",
+        "responsibilities": [
+          "Widget development for websites without using html iframe",
+          "Layout of the admin panel for the widget via Vuetify",
+          "Setup unit, component, integration tests. Setup json server for tests"
+        ]
+      },
+      {
+        "role": "Frontend Developer",
+        "description": "Service for hiring companies, creating contracts, bonds, etc.",
+        "responsibilities": [
+          "Development assistance",
+          "Setup JWT authentication"
+        ]
+      },
+      {
+        "role": "Frontend Developer",
+        "description": "Service for viewing traffic jams on alleys, using cameras",
+        "responsibilities": [
+          "Project layout from scratch",
+          "PWA Setup"
+        ]
+      },
+      {
+        "role": "Frontend Developer",
+        "description": "KickEx - a cryptocurrency exchange with smart orders and low trading commissions.",
+        "responsibilities": [
+          "Project layout from scratch, create components, adding a dark theme",
+          "Setup tradingview charts."
+        ]
+      },
+      {
+        "role": "Frontend Developer",
+        "description": "Sale of diapers throughout Russia",
+        "responsibilities": [
+          "Development of new features, support.",
+          "HTML letter layout.",
+          "Writing integration tests for fronted."
+        ]
+      },
+      {
+        "role": "Frontend Developer",
+        "description": "Development of the official website for Mad Devs",
+        "responsibilities": [
+          "The layout of the new design for the website of the company Mad Devs.",
+          "Migrating MD site from Vue.js to Nuxt.js framework"
+        ]
+      },
+      {
+        "role": "Frontend Developer",
+        "description": "Generation of contextual advertising",
+        "responsibilities": [
+          "Development of new feature, Support.",
+          "Server api integration on the client side."
+        ]
+      },
+      {
+        "role": "WordPress Developer",
+        "description": "Organization of tours in Kyrgyzstan",
+        "responsibilities": [
+          "Development of new feature, Support.",
+          "Deploy code to production via FTP FileZilla.",
+          "Creation of new blocks on the pages, without the involvement of the designer."
+        ]
+      },
+      {
+        "role": "Frontend Developer",
+        "description": "This is library for GPS and Accelerometer data \"fusion\" with Kalman filter",
+        "responsibilities": [
+          "Setup project from scratch",
+          "Setup Gulp tasks for production",
+          "Added multi-language functional without using plugins."
+        ]
+      },
+      {
+        "role": "Intern",
+        "description": "Development of an internal project for sending spam to different services.",
+        "responsibilities": [
+          "Learning Django, Python, PosgreSQL, Javascript, HTML, CSS",
+          "Development of a Telegram bot for finding mentors",
+          "Writing unit and integration tests for Django."
+        ]
+      }
+    ]
+  },
+  "skills": {
+    "title": "My Skills",
+    "subtitle": "A list of technologies I know and use",
+    "groups": [
+      "Frontend",
+      "UI & Design",
+      "Backend & Database",
+      "Build & DevOps",
+      "Platforms & Services",
+      "Testing & More"
+    ]
+  },
+  "meta": {
+    "title": "Denis Grushkin - Web Engineer",
+    "description": "My objective is to foster business growth through the adoption of cutting-edge technologies.",
+    "keywords": "denisoed, denisoed.com, portfolio, denisoed portfolio, denisoed resume, denisoed cv, IT, front-end developer, full-stack developer"
+  },
+  "misc": {
+    "loading": "Loading",
+    "burgerAriaLabel": "Toggle navigation"
+  }
+}

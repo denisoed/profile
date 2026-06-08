@@ -6,14 +6,13 @@
 
     <div class="loader-wrap-heading">
       <div class="load-text">
-        <span>L</span>
-        <span>o</span>
-        <span>a</span>
-        <span>d</span>
-        <span>i</span>
-        <span>n</span>
-        <span>g</span>
+        <span v-for="(letter, i) in loadingLetters" :key="i">{{ letter }}</span>
       </div>
     </div>
   </div>
 </template>
+
+<script setup lang="ts">
+const { t } = useI18n()
+const loadingLetters = t('misc.loading').split('')
+</script>

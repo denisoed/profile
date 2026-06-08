@@ -10,10 +10,10 @@
             <div class="d-inline-block">
               <div class="sub-title-icon d-flex align-items-center">
                 <span class="icon pe-7s-portfolio"></span>
-                <h2 class="fz-16">My Pet Projects</h2>
+                <h2 class="fz-16">{{ $t('petProjects.title') }}</h2>
               </div>
             </div>
-            <h3>Some of my pet projects</h3>
+            <h3>{{ $t('petProjects.subtitle') }}</h3>
           </div>
         </div>
       </div>
@@ -21,7 +21,7 @@
       <div class="gallery">
         <div class="row">
           <a
-            v-for="(project, index) in PROJECTS"
+            v-for="(project, index) in localizedProjects"
             :key="`project-${index}`"
             class="col-lg-4 items wow fadeIn project-item"
             :href="project.link"
@@ -38,7 +38,7 @@
               <div class="cont d-flex align-items-end project-content">
                 <div>
                   <h6>{{ project.title }}</h6>
-                  <p>{{ project.description }}</p>
+                  <p>{{ project.localizedDescription }}</p>
                   <span class="tag mt-3 mb-0">{{ project.tag }}</span>
                 </div>
                 <div class="project-link ml-auto">
@@ -69,6 +69,10 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from "vue";
+
+const { t } = useI18n()
+
 const PROJECTS = [
   {
     title: "AI Corp",
@@ -151,6 +155,13 @@ const PROJECTS = [
     wowDelay: "1.8s",
   },
 ];
+
+const localizedProjects = computed(() =>
+  PROJECTS.map((project, idx) => ({
+    ...project,
+    localizedDescription: t(`petProjects.items.${idx}.description`),
+  }))
+)
 </script>
 
 <style scoped lang="scss">

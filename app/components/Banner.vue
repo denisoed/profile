@@ -4,15 +4,14 @@
       <div class="row">
         <div class="col-lg-6 valign">
           <div class="content">
-            <div class="sub-title mb-30 fz-14 opacity-7">Web Engineer</div>
+            <div class="sub-title mb-30 fz-14 opacity-7">{{ $t('banner.subtitle') }}</div>
             <h1>
-              Hello, I’m <br />
-              <span class="main-color">Denis Grushkin</span>
+              {{ $t('banner.greeting') }} <br />
+              <span class="main-color">{{ $t('banner.name') }}</span>
             </h1>
             <div class="text mt-30">
               <p>
-                My objective is to foster business growth through the adoption
-                of cutting-edge technologies.
+                {{ $t('banner.description') }}
               </p>
             </div>
             <div
@@ -22,8 +21,8 @@
                 <div class="d-flex align-items-center">
                   <span class="fz-60 fw-bold mr-10">{{ experience }}</span>
                   <span class="fz-16"
-                    >Years of <br />
-                    Experiences</span
+                    >{{ $t('banner.yearsOf') }} <br />
+                    {{ $t('banner.experiences') }}</span
                   >
                 </div>
               </div>

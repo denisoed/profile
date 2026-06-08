@@ -15,17 +15,17 @@
               <ul class="navbar-nav">
                 <li class="nav-item">
                   <a class="nav-link" href="#home" data-scroll-nav="0"
-                    ><span class="rolling-text">Home</span></a
+                    ><span class="rolling-text">{{ $t('nav.home') }}</span></a
                   >
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#services" data-scroll-nav="1"
-                    ><span class="rolling-text">Services</span></a
+                    ><span class="rolling-text">{{ $t('nav.services') }}</span></a
                   >
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#experience" data-scroll-nav="2"
-                    ><span class="rolling-text">Experiences</span></a
+                    ><span class="rolling-text">{{ $t('nav.experiences') }}</span></a
                   >
                 </li>
               </ul>
@@ -36,6 +36,7 @@
         <div class="col-lg-3 col-6 order2">
           <div class="bord d-flex justify-content-end align-items-center">
             <SocialLinks class="desktop-social-links" />
+            <button class="lang-switcher" @click="toggleLocale">{{ locale === 'en' ? 'EN' : 'RU' }}</button>
             <BurgerBtn class="navbar-toggler" />
           </div>
         </div>
@@ -45,16 +46,11 @@
 </template>
 
 <script setup lang="ts">
-const LINKS = [
-  {
-    name: "Home",
-    link: "#banner",
-  },
-  {
-    name: "About",
-    link: "#about",
-  },
-];
+const { locale, setLocale } = useI18n()
+
+function toggleLocale() {
+  setLocale(locale.value === 'en' ? 'ru' : 'en')
+}
 </script>
 
 <style lang="scss" scoped>
@@ -78,6 +74,30 @@ const LINKS = [
   .bord {
     @media screen and (max-width: 420px) {
       padding: 8px 15px;
+    }
+  }
+
+  .navbar-toggler {
+    margin-left: 10px;
+  }
+
+  .lang-switcher {
+    color: #fff;
+    font-weight: 600;
+    font-size: 13px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 4px 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-left: 10px;
+
+    &:hover {
+      background: rgba(236, 28, 36, 0.2);
+      border-color: rgba(236, 28, 36, 0.4);
     }
   }
 

@@ -2,12 +2,26 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   plugins: ["~/plugins/analytics.client.ts"],
+  modules: ["@nuxtjs/i18n"],
+
+  i18n: {
+    locales: [
+      { code: "en", iso: "en-US", file: "en.json" },
+      { code: "ru", iso: "ru-RU", file: "ru.json" },
+    ],
+    defaultLocale: "en",
+    langDir: "locales",
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: "i18n_redirected",
+      redirectOn: "root",
+      alwaysRedirect: true,
+      fallbackLocale: "en",
+    },
+  },
 
   app: {
     head: {
-      htmlAttrs: {
-        lang: "en",
-      },
       link: [
         // Preload critical fonts for better performance
         {
@@ -35,18 +49,6 @@ export default defineNuxtConfig({
         },
       ],
       meta: [
-        // OpenGraph meta tags
-        {
-          key: "og:title",
-          property: "og:title",
-          content: "Hello, I'm Denis Grushkin",
-        },
-        {
-          key: "og:description",
-          property: "og:description",
-          content:
-            "My objective is to foster business growth through the adoption of cutting-edge technologies.",
-        },
         { key: "og:image", property: "og:image", content: "/og-image.png" },
         {
           key: "og:image:width",
@@ -71,17 +73,6 @@ export default defineNuxtConfig({
           key: "twitter:card",
           name: "twitter:card",
           content: "summary_large_image",
-        },
-        {
-          key: "twitter:title",
-          name: "twitter:title",
-          content: "Hello, I'm Denis Grushkin",
-        },
-        {
-          key: "twitter:description",
-          name: "twitter:description",
-          content:
-            "My objective is to foster business growth through the adoption of cutting-edge technologies.",
         },
         {
           key: "twitter:image",

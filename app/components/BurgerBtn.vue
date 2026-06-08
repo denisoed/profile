@@ -2,7 +2,7 @@
   <button
     id="burger-btn"
     type="button"
-    aria-label="Toggle navigation"
+    :aria-label="$t('misc.burgerAriaLabel')"
     :class="{ open: opened }"
     @click="toggle"
   >
