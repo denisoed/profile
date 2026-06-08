@@ -6,7 +6,7 @@
           <div class="col-lg-8 text-center">
             <div class="d-inline-block">
               <div class="sub-title-icon d-flex align-items-center">
-                <span class="icon pe-7s-box2"></span>
+                <span class="icon ion-ios-options"></span>
                 <h2 class="fz-16">{{ $t('services.title') }}</h2>
               </div>
             </div>
@@ -25,11 +25,8 @@
             <div class="services-card__watermark">{{ service.step }}</div>
             <div class="cont">
               <div class="services-card__header">
-                <div :class="['services-card__icon', service.iconClass]">
-                  <img
-                    :src="`https://cdn.simpleicons.org/${service.icon}`"
-                    :alt="service.title"
-                  />
+                <div class="services-card__icon">
+                  <i :class="['ion', service.icon]"></i>
                 </div>
                 <div class="services-card__step">{{ service.step }}</div>
               </div>
@@ -122,8 +119,8 @@ const localizedServices = computed(() =>
         transform: translateY(-5px);
       }
 
-      .services-card__icon img {
-        transform: scale(1.1) rotate(5deg);
+      .services-card__icon .ion {
+        transform: scale(1.2);
       }
     }
 
@@ -153,9 +150,11 @@ const localizedServices = computed(() =>
       flex-shrink: 0;
       margin-right: 20px;
 
-      img {
+      .ion {
+        font-size: 40px;
+        color: #fff;
         transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        filter: brightness(0) invert(1);
+        display: inline-block;
       }
     }
 
