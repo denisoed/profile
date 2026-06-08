@@ -36,7 +36,7 @@
         <div class="col-lg-3 col-6 order2">
           <div class="bord d-flex justify-content-end align-items-center">
             <SocialLinks class="desktop-social-links" />
-            <button class="lang-switcher" @click="toggleLocale">{{ locale === 'en' ? 'EN' : 'RU' }}</button>
+            <button class="lang-switcher" @click="toggleLocale">{{ locale === 'en' ? 'RU' : 'EN' }}</button>
             <BurgerBtn class="navbar-toggler" />
           </div>
         </div>
