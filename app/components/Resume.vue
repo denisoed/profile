@@ -119,6 +119,22 @@ const totalItems = computed(() => LIST1.length + LIST2.length);
 
 const LIST1 = [
   {
+    date: "Mar 2026 – Present",
+    projectName: "Salta CRM",
+    role: "Full-stack Developer",
+    technology: "TypeScript, React, RxDB, Supabase, Capacitor",
+    description:
+      "Offline-first CRM and multi-channel messaging workspace for small businesses with AI-powered assistant, real-time WhatsApp/Telegram integration, and automatic conflict-free data synchronization.",
+    responsibilities: [
+      "Deeply integrated AI assistant as an in-app helper for managing products, orders, shifts, and analytics",
+      "Added AI-powered auto-replier across WhatsApp and Telegram chats with custom presets",
+      "Built offline-first sync with field-level conflict resolution via RxDB + Supabase",
+      "Unified WhatsApp and Telegram messaging with optimistic sending and realtime delivery",
+      "Configured RevenueCat for in-app subscriptions and usage-based AI billing",
+      "Set up App Store Connect account, certificates, and published app to iOS App Store",
+    ],
+  },
+  {
     date: "Feb 2026 – May 2026",
     projectName: "Enji.ai",
     role: "Full-stack Developer",
